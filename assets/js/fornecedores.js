@@ -6,11 +6,10 @@ async function buscarFornecedores() {
   if (response.status == 200) {
     const json = await response.json();
 
-    const fornecedores = json.FORNECEDORES;
-    console.log(fornecedores);
-
-    carregarFornecedores(fornecedores);
+    carregarFornecedores(json.FORNECEDORES);
     carregarTooltip();
+
+    carregarPaginacao(json.PAGINACAO);
   }
 }
 
@@ -130,6 +129,29 @@ function carregarFornecedores(fornecedores) {
 }
 function carregarPaginacao(paginacao) {
 
+  const ulPagination = document.createElement("ul");
+  ulPagination.classList.add("pagination", "justify-content-center");
+
+  for (let i = 1; i <= paginacao.PAGINA_TOTAL; i++) {
+    const liItem = document.createElement("li");
+    liItem.classList.add("page-item");
+    if (paginacao.PAGINAL_ATUAL == i) {
+      liItem.classList.add("active");
+    }
+
+    const aLink = document.createElement("a");
+    aLink.classList.add("page-link", "link");
+    aLink.href = `fornecedores.html?page=${i}`;
+    aLink.innerText = i;
+
+    liItem.appendChild(aLink);
+    ulPagination.appendChild(liItem);
+  }
+
+  const page = document.getElementById("paginacao");
+  page.appendChild(ulPagination);
+
+  console.log(paginacao);
 }
 
 function carregarTooltip() {
