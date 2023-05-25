@@ -21,5 +21,11 @@
             "TXT_EMAIL": "email@empresa3.com",
             "BIT_DELETAR": 1
         }
-    ]
+    ],
+    "PAGINACAO": {
+        "TOTAL_ITEM": 3,
+        "PAGINA_QTD_ITEM": 10,
+        "PAGINA_TOTAL": 1,
+        "PAGINAL_ATUAL": 1
+    }
 }

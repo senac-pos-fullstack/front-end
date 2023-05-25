@@ -111,89 +111,7 @@
                                         <th scope="col" class="text-center">Deletar</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Empresa 1</td>
-                                        <td>Av Paulista</td>
-                                        <td>11 91234-5678</td>
-                                        <td class="text-center"><a href="#" class="link"><i
-                                                    class="fa-solid fa-pen-to-square"></i></a></td>
-                                        <td class="text-center"><a href="#" class="link" data-bs-toggle="modal"
-                                                data-bs-target="#removerModal1"><i class="fa-solid fa-trash"></i></a>
-                                        </td>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="removerModal1" tabindex="-1"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Você tem certeza?
-                                                        </h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Uma vez removido não poderá voltar atrás!
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-bs-dismiss="modal">Fechar</button>
-                                                        <a href="#" type="button" class="btn btn-danger">Remover</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Empresa 2</td>
-                                        <td>Av Brasil</td>
-                                        <td>11 91234-5678</td>
-                                        <td class="text-center"><a href="#" class="link"><i
-                                                    class="fa-solid fa-pen-to-square"></i></a></td>
-                                        <td class="text-center"><a href="#" class="link" data-bs-toggle="modal"
-                                                data-bs-target="#removerModal2"><i class="fa-solid fa-trash"></i></a>
-                                        </td>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="removerModal2" tabindex="-1"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Você tem certeza?
-                                                        </h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Uma vez removido não poderá voltar atrás!
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-bs-dismiss="modal">Fechar</button>
-                                                        <a href="#" type="button" class="btn btn-danger">Remover</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Empresa 3</td>
-                                        <td>Av Nações Unidas</td>
-                                        <td>11 91234-5678</td>
-                                        <td class="text-center"><a href="#" class="link"><i
-                                                    class="fa-solid fa-pen-to-square"></i></a></td>
-                                        <td class="text-center">
-                                            <a class="link disabled" href="#" data-bs-toggle="tooltip"
-                                                data-bs-placement="left"
-                                                title="Fornecedor com produto relacionado, por favor exclua o produto primeiro.">
-                                                <i class="fa-solid fa-trash"></i>
-                                            </a>
-                                        </td>
-
-                                    </tr>
+                                <tbody id="item">
                                 </tbody>
                             </table>
                         </div>
@@ -230,6 +148,8 @@
         crossorigin="anonymous"></script>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/fornecedores.js"></script>
+
 </body>
 
 </html>
