@@ -1,0 +1,25 @@
+{
+    "FORNECEDORES": [
+        {
+            "ID_FORNECEDOR": 1,
+            "TXT_NOME": "Empresa 1",
+            "TXT_ENDERECO": "Rua da empresa 1, nº 123",
+            "TXT_EMAIL": "email@empresa1.com",
+            "BIT_DELETAR": 0
+        },
+        {
+            "ID_FORNECEDOR": 2,
+            "TXT_NOME": "Empresa 2",
+            "TXT_ENDERECO": "Rua da empresa 2, nº 123",
+            "TXT_EMAIL": "email@empresa2.com",
+            "BIT_DELETAR": 0
+        },
+        {
+            "ID_FORNECEDOR": 3,
+            "TXT_NOME": "Empresa 3",
+            "TXT_ENDERECO": "Rua da empresa 3, nº 123",
+            "TXT_EMAIL": "email@empresa3.com",
+            "BIT_DELETAR": 1
+        }
+    ]
+}

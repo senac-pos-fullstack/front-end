@@ -1,0 +1,51 @@
+.link {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.link:hover {
+    color: gray !important;
+}
+
+.disabled {
+    color: #6c757d !important;
+    border-color: #dee2e6 !important;
+}
+
+.active {
+    background-color: #ffffff00 !important;
+    color: gray !important;
+}
+
+.active .link:hover {
+    color: white !important;
+}
+
+h4 {
+    display: inline;
+}
+
+.bd-links {
+    position: sticky;
+    top: 0;
+    display: block !important;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.page-item.active .page-link {
+    background-color: gray !important;
+    border-color: gray !important;
+}
+
+.btn-primary {
+    border: black !important;
+    background-color: black !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    border: gray !important;
+    background-color: gray !important;
+    color: white !important;
+}
