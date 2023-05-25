@@ -37,7 +37,7 @@ function carregarArmazens(armazens) {
     //TD TELEFONE
     const tdTelefone = document.createElement("td");
     tdTelefone.innerText = armazem.TXT_TELEFONE;
-    tr.appendChild(tdtdTelefoneEmail);
+    tr.appendChild(tdTelefone);
 
     //TD EDITAR
     const tdEditar = document.createElement("td");
