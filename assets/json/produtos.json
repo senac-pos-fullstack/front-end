@@ -1,4 +1,24 @@
 {
+    "EMPRESAS": [
+        {
+            "ID_EMPRESA": 1,
+            "TXT_NOME": "Bic"
+        },
+        {
+            "ID_EMPRESA": 1,
+            "TXT_NOME": "Faber Castel"
+        }
+    ],
+    "ARMAZENS": [
+        {
+            "ID_ARMAZEM": 1,
+            "TXT_NOME": "Matriz"
+        },
+        {
+            "ID_ARMAZEM": 2,
+            "TXT_NOME": "Armazem 2"
+        }
+    ],
     "PRODUTOS": [
         {
             "ID_PRODUTO": 1,
@@ -6,9 +26,17 @@
             "DEC_PRECO_MEDIO": 20.10,
             "NUM_ESTOQUE_MIN": 20,
             "NUM_QUANTIDADE": 100,
-            "TXT_ARMAZEM": "Armazem 1",
-            "TXT_FORNECEDOR": "Fornecedor 1",
-            "BIT_DELETAR": 0
+            "BIT_DELETAR": 0,
+            "EMPRESAS": [
+                {
+                    "TXT_NOME": "Bic"
+                }
+            ],
+            "ARMAZENS": [
+                {
+                    "TXT_NOME": "Matriz"
+                }
+            ]
         },
         {
             "ID_PRODUTO": 2,
@@ -16,9 +44,17 @@
             "DEC_PRECO_MEDIO": 20.20,
             "NUM_ESTOQUE_MIN": 20,
             "NUM_QUANTIDADE": 40,
-            "TXT_ARMAZEM": "Armazem 2",
-            "TXT_FORNECEDOR": "Fornecedor 2",
-            "BIT_DELETAR": 1
+            "BIT_DELETAR": 1,
+            "EMPRESAS": [
+                {
+                    "TXT_NOME": "Bic"
+                }
+            ],
+            "ARMAZENS": [
+                {
+                    "TXT_NOME": "Matriz"
+                }
+            ]
         },
         {
             "ID_PRODUTO": 3,
@@ -26,15 +62,17 @@
             "DEC_PRECO_MEDIO": 30.10,
             "NUM_ESTOQUE_MIN": 20,
             "NUM_QUANTIDADE": 10,
-            "TXT_ARMAZEM": "Armazem 1",
-            "TXT_FORNECEDOR": "Fornecedor 1",
-            "BIT_DELETAR": 0
+            "BIT_DELETAR": 0,
+            "EMPRESAS": [
+                {
+                    "TXT_NOME": "Bic"
+                }
+            ],
+            "ARMAZENS": [
+                {
+                    "TXT_NOME": "Matriz"
+                }
+            ]
         }
-    ],
-    "PAGINACAO": {
-        "TOTAL_ITEM": 3,
-        "PAGINA_QTD_ITEM": 10,
-        "PAGINA_TOTAL": 1,
-        "PAGINAL_ATUAL": 1
-    }
+    ]
 }

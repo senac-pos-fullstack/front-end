@@ -1,3 +1,7 @@
+window.onload = function () {
+  buscar();
+};
+
 async function buscar() {
   //Mudar endpoint para webservice
   const url =
@@ -132,30 +136,6 @@ function carregar(empresas) {
   });
 }
 
-function paginacao(page) {
-  const ulPagination = document.createElement("ul");
-  ulPagination.classList.add("pagination", "justify-content-center");
-
-  for (let i = 1; i <= page.PAGINA_TOTAL; i++) {
-    const liItem = document.createElement("li");
-    liItem.classList.add("page-item");
-    if (page.PAGINAL_ATUAL == i) {
-      liItem.classList.add("active");
-    }
-
-    const aLink = document.createElement("a");
-    aLink.classList.add("page-link", "link");
-    aLink.href = `empresas.html?page=${i}`;
-    aLink.innerText = i;
-
-    liItem.appendChild(aLink);
-    ulPagination.appendChild(liItem);
-  }
-
-  const pageDiv = document.getElementById("paginacao");
-  pageDiv.appendChild(ulPagination);
-}
-
 function carregarTooltip() {
   tooltipTriggerList = [].slice.call(
     document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -165,6 +145,3 @@ function carregarTooltip() {
   });
 }
 
-window.onload = function () {
-  buscar();
-};
