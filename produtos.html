@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Produtos</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bd-links">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link align-middle px-0 link ">
+                                <i class="fa-solid fa-table-columns"></i>
+                                <span class="ms-1 d-none d-sm-inline">Inicio</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="alertas.html" class="nav-link align-middle px-0 link ">
+                                <i class="fa-solid fa-bell"></i>
+                                <span class="ms-1 d-none d-sm-inline">Alertas</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="transacoes.html" class="nav-link align-middle px-0 link ">
+                                <i class="fa-solid fa-arrows-rotate"></i>
+                                <span class="ms-1 d-none d-sm-inline">Transações</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="empresas.html" class="nav-link align-middle px-0 link">
+                                <i class="fa-solid fa-store"></i>
+                                <span class="ms-1 d-none d-sm-inline">Empresas</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="armazens.html" class="nav-link align-middle px-0 link">
+                                <i class="fa-solid fa-warehouse"></i>
+                                <span class="ms-1 d-none d-sm-inline">Armazéns</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="produtos.html" class="nav-link align-middle px-0 link">
+                                <i class="fa-solid fa-box-open"></i>
+                                <span class="ms-1 d-none d-sm-inline">Produtos</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center dropdown-toggle link" id="dropdownPerfil"
+                            data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="d-none d-sm-inline mx-1">Perfil</span>
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownPerfil">
+                            <li>
+                                <a class="dropdown-item link" href="contas.html">Contas</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item link" href="logout.html">Sair</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col m-4">
+                <div class="row">
+                    <div class="col-6">
+                        <h4>Produtos</h4>
+                    </div>
+                    <div class="col-6 text-end"><a class="btn btn-primary" href="produto.html?role=add"
+                            role="button">Adicionar</a>
+                    </div>
+                </div>
+                <div class="my-4 mx-2">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="row my-4 mx-1">
+                                <div class="col-4">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="empresaSelect">Empresa:
+                                        </label>
+                                        <select class="form-select" id="empresaSelect">
+                                            <option selected value="0">Todos</option>
+                                            <option value="1">empresa 1</option>
+                                            <option value="2">empresa 2</option>
+                                            <option value="3">empresa 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="armazemSelect">Armazém: </label>
+                                        <select class="form-select" id="armazemSelect">
+                                            <option selected value="0">Todos</option>
+                                            <option value="1">Armazém 1</option>
+                                            <option value="2">Armazém 2</option>
+                                            <option value="3">Armazém 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Buscar Produto"
+                                            aria-describedby="buscarProduto">
+                                        <button class="btn btn-primary" type="button" id="buscarProduto">Buscar</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row my-2 mx-1">
+                                <div class="col-12">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Nome</th>
+                                                <th>Preço médio</th>
+                                                <th class="text-center">Estoque min</th>
+                                                <th class="text-center">Qtd</th>
+                                                <th class="text-center">Realizar Transação</th>
+                                                <th class="text-center">Empresas</th>
+                                                <th class="text-center">Armazéns</th>
+                                                <th class="text-center">Editar</th>
+                                                <th class="text-center">Deletar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="item">
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Caneta</td>
+                                                <td>R$ 2,20</td>
+                                                <td class="text-center">100</td>
+                                                <td class="text-center">321</td>
+                                                <td class="text-center">
+                                                    <a class="link" href="transacao.html?produto=1"><i
+                                                            class="fa-solid fa-arrows-rotate"></i></a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="link" href="#" data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom" data-bs-html="true"
+                                                        title="<p>empresa 1</p><p>empresa 2</p><p>empresa 3</p>"><i
+                                                            class="fa-solid fa-shop"></i></a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="link" href="#" data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom" data-bs-html="true"
+                                                        title="<p>Armazém 1</p><p>Armazém 2</p><p>Armazém 3</p>"><i
+                                                            class="fa-solid fa-warehouse"></i></a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="link" href="#"><i class="fa-solid fa-pencil"></i></a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="link" href="#"><i class="fa-solid fa-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Lápis</td>
+                                                <td>R$ 1,10</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">321</td>
+                                                <td class="text-center">
+                                                    <a class="link" href="transacao.html?produto=2"><i
+                                                            class="fa-solid fa-arrows-rotate"></i></a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="link" href="#" data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom" data-bs-html="true"
+                                                        title="<p>empresa 1</p><p>empresa 2</p><p>empresa 3</p>"><i
+                                                            class="fa-solid fa-shop"></i></a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="link" href="#" data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom" data-bs-html="true"
+                                                        title="<p>Armazém 1</p><p>Armazém 2</p><p>Armazém 3</p>"><i
+                                                            class="fa-solid fa-warehouse"></i></a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="link" href="#"><i class="fa-solid fa-pencil"></i></a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="link" href="#"><i class="fa-solid fa-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Borracha</td>
+                                                <td>R$ 1,10</td>
+                                                <td class="text-center">200</td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center">
+                                                    <a class="link" href="transacao.html?produto=3"><i
+                                                            class="fa-solid fa-arrows-rotate"></i></a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="link" href="#" data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom" data-bs-html="true"
+                                                        title="<p>empresa 1</p><p>empresa 2</p><p>empresa 3</p>"><i
+                                                            class="fa-solid fa-shop"></i></a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="link" href="#" data-bs-toggle="tooltip"
+                                                        data-bs-placement="bottom" data-bs-html="true"
+                                                        title="<p>Armazém 1</p><p>Armazém 2</p><p>Armazém 3</p>"><i
+                                                            class="fa-solid fa-warehouse"></i></a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="link" href="#"><i class="fa-solid fa-pencil"></i></a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="link" href="#"><i class="fa-solid fa-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row my-5">
+                        <nav id="paginacao">
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

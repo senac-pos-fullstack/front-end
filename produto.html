@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Fornecedores</title>
+    <title>Produto</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -28,13 +28,15 @@
                         id="menu">
                         <li class="nav-item">
                             <a href="index.html" class="nav-link align-middle px-0 link ">
-                                <i class="fa-solid fa-house"></i></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                                <i class="fa-solid fa-house"></i></i>
+                                <span class="ms-1 d-none d-sm-inline">Inicio</span>
                             </a>
                         </li>
                         <li>
                             <a href="#dashboard" data-bs-toggle="collapse" class="nav-link px-0 align-middle link">
-                                <i class="fa-solid fa-table-columns"></i> <span
-                                    class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                                <i class="fa-solid fa-table-columns"></i>
+                                <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+                            </a>
                             <ul class="collapse nav flex-column ms-1" id="dashboard" data-bs-parent="#menu">
                                 <li>
                                     <a href="alertas.html" class="nav-link px-0 link"> <i class="fa-solid fa-bell"></i>
@@ -49,80 +51,97 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="fornecedores.html" class="nav-link align-middle px-0 link active">
-                                <i class="fa-solid fa-truck"></i> <span
-                                    class="ms-1 d-none d-sm-inline">Fornecedores</span> </a>
+                        <li>
+                            <a href="#fornecedores" data-bs-toggle="collapse" class="nav-link px-0 align-middle link">
+                                <i class="fa-solid fa-truck"></i>
+                                <span class="ms-1 d-none d-sm-inline">Fornecedores</span>
                             </a>
+                            <ul class="collapse nav flex-column ms-1" id="fornecedores" data-bs-parent="#menu">
+                                <li>
+                                    <a href="fornecedores.html" class="nav-link px-0 link">
+                                        <i class="fa-solid fa-table-list"></i>
+                                        <span class="d-none d-sm-inline">Lista</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="fornecedores-produtos.html" class="nav-link px-0 link">
+                                        <i class="fa-solid fa-dolly"></i>
+                                        <span class="d-none d-sm-inline">Produtos</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="armazens.html" class="nav-link align-middle px-0 link">
-                                <i class="fa-solid fa-warehouse"></i><span
-                                    class="ms-1 d-none d-sm-inline">Armazéns</span>
+                                <i class="fa-solid fa-warehouse"></i>
+                                <span class="ms-1 d-none d-sm-inline">Armazéns</span>
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a href="produtos.html" class="nav-link align-middle px-0 link">
-                                <i class="fa-solid fa-box-open"></i><span
-                                    class="ms-1 d-none d-sm-inline">Produtos</span></a>
+                                <i class="fa-solid fa-box-open"></i>
+                                <span class="ms-1 d-none d-sm-inline">Produtos</span>
                             </a>
                         </li>
                     </ul>
                     <hr>
                     <div class="dropdown pb-4">
                         <a href="#" class="d-flex align-items-center dropdown-toggle link" id="dropdownPerfil"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown">
                             <i class="fa-solid fa-user"></i>
                             <span class="d-none d-sm-inline mx-1">Perfil</span>
                         </a>
                         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownPerfil">
-                            <li><a class="dropdown-item link" href="contas.html">Contas</a></li>
+                            <li>
+                                <a class="dropdown-item link" href="contas.html">Contas</a>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item link" href="logout.html">Sair</a></li>
+                            <li>
+                                <a class="dropdown-item link" href="logout.html">Sair</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="col py-3">
-                <div>
-                    <div class="row">
-                        <div class="col-6">
-                            <h4>Fornecedores</h4>
-                        </div>
-                        <div class="col-6 text-end"><a class="btn btn-primary" href="fornecedor.html?role=add"
-                                role="button">Adicionar</a>
-                        </div>
-                    </div>
-                    <div class="row my-2">
-                        <div class="col-12">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Endereço</th>
-                                        <th scope="col">Telefone</th>
-                                        <th scope="col" class="text-center">Editar</th>
-                                        <th scope="col" class="text-center">Deletar</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="item">
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-                    <div class="row my-5">
-                        <nav id="paginacao">
-                        </nav>
+            <div class="col m-4">
+                <div class="row">
+                    <div class="col-6">
+                        <h4>Produto</h4>
                     </div>
                 </div>
+
+                <div class="my-4 mx-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row mx-2">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="produto" class="form-label">Produto</label>
+                                        <input type="text" class="form-control" id="produto">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="quantidadeMinima" class="form-label">Quantidade Minima</label>
+                                        <input type="number" class="form-control" id="quantidadeMinima" min="0">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <a class="btn btn-primary" href="#" id="confirmar">Confirmar</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -130,7 +149,7 @@
         crossorigin="anonymous"></script>
 
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/fornecedores.js"></script>
+    <script src="assets/js/produto.js"></script>
 
 </body>
 

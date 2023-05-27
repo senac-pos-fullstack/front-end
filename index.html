@@ -26,14 +26,16 @@
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                         id="menu">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link align-middle px-0 link active">
-                                <i class="fa-solid fa-house"></i></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                            <a href="index.html" class="nav-link align-middle px-0 link ">
+                                <i class="fa-solid fa-house"></i></i>
+                                <span class="ms-1 d-none d-sm-inline">Inicio</span>
                             </a>
                         </li>
                         <li>
                             <a href="#dashboard" data-bs-toggle="collapse" class="nav-link px-0 align-middle link">
-                                <i class="fa-solid fa-table-columns"></i> <span
-                                    class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                                <i class="fa-solid fa-table-columns"></i>
+                                <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+                            </a>
                             <ul class="collapse nav flex-column ms-1" id="dashboard" data-bs-parent="#menu">
                                 <li>
                                     <a href="alertas.html" class="nav-link px-0 link"> <i class="fa-solid fa-bell"></i>
@@ -48,39 +50,56 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="fornecedores.html" class="nav-link align-middle px-0 link">
-                                <i class="fa-solid fa-truck"></i> <span
-                                    class="ms-1 d-none d-sm-inline">Fornecedores</span> </a>
+                        <li>
+                            <a href="#fornecedores" data-bs-toggle="collapse" class="nav-link px-0 align-middle link">
+                                <i class="fa-solid fa-truck"></i>
+                                <span class="ms-1 d-none d-sm-inline">Fornecedores</span>
                             </a>
+                            <ul class="collapse nav flex-column ms-1" id="fornecedores" data-bs-parent="#menu">
+                                <li>
+                                    <a href="fornecedores.html" class="nav-link px-0 link">
+                                        <i class="fa-solid fa-table-list"></i>
+                                        <span class="d-none d-sm-inline">Lista</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="fornecedores-produtos.html" class="nav-link px-0 link">
+                                        <i class="fa-solid fa-dolly"></i>
+                                        <span class="d-none d-sm-inline">Produtos</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="armazens.html" class="nav-link align-middle px-0 link">
-                                <i class="fa-solid fa-warehouse"></i><span
-                                    class="ms-1 d-none d-sm-inline">Armazéns</span>
+                                <i class="fa-solid fa-warehouse"></i>
+                                <span class="ms-1 d-none d-sm-inline">Armazéns</span>
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a href="produtos.html" class="nav-link align-middle px-0 link">
-                                <i class="fa-solid fa-box-open"></i><span
-                                    class="ms-1 d-none d-sm-inline">Produtos</span></a>
+                                <i class="fa-solid fa-box-open"></i>
+                                <span class="ms-1 d-none d-sm-inline">Produtos</span>
                             </a>
                         </li>
                     </ul>
                     <hr>
                     <div class="dropdown pb-4">
                         <a href="#" class="d-flex align-items-center dropdown-toggle link" id="dropdownPerfil"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown">
                             <i class="fa-solid fa-user"></i>
                             <span class="d-none d-sm-inline mx-1">Perfil</span>
                         </a>
                         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownPerfil">
-                            <li><a class="dropdown-item link" href="contas.html">Contas</a></li>
+                            <li>
+                                <a class="dropdown-item link" href="contas.html">Contas</a>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item link" href="logout.html">Sair</a></li>
+                            <li>
+                                <a class="dropdown-item link" href="logout.html">Sair</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -88,8 +107,31 @@
 
             <div class="col py-3">
                 <div>
-                    <div class="row mx-2">
-                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 my-3">
+                    <div class="row mx-1">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 my-3">
+                            <div class="card shadow text-center">
+                                <a class="link" href="fornecedores.html">
+                                    <div class="card-statistic-4">
+                                        <div class="align-items-center justify-content-between">
+                                            <div class="row align-items-center ">
+                                                <div class="col-6">
+                                                    <div class="card-content">
+                                                        <h5 class="mt-3" style="font-size: 16px;">Alertas</h5>
+                                                        <h2 class="mb-3">2</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="m-2">
+                                                        <img src="assets/images/alerta.png" width="100%" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 my-3">
                             <div class="card shadow text-center">
                                 <a class="link" href="fornecedores.html">
                                     <div class="card-statistic-4">
@@ -112,7 +154,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 my-3">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 my-3">
                             <div class="card shadow text-center">
                                 <a class="link" href="armazens.html">
 
@@ -137,7 +179,7 @@
                             </div>
 
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 my-3">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12 my-3">
                             <div class="card shadow text-center">
                                 <a class="link" href="produtos.html">
                                     <div class="card-statistic-4">

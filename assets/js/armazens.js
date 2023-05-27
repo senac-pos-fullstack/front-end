@@ -29,16 +29,6 @@ function carregarArmazens(armazens) {
     tr.appendChild(tdNome);
     tdNome.innerText = armazem.TXT_NOME;
 
-    //TD ENDERECO
-    const tdEndereco = document.createElement("td");
-    tdEndereco.innerText = armazem.TXT_ENDERECO;
-    tr.appendChild(tdEndereco);
-
-    //TD TELEFONE
-    const tdTelefone = document.createElement("td");
-    tdTelefone.innerText = armazem.TXT_TELEFONE;
-    tr.appendChild(tdTelefone);
-
     //TD EDITAR
     const tdEditar = document.createElement("td");
     tdEditar.classList.add("text-center");

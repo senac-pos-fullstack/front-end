@@ -28,60 +28,79 @@
                         id="menu">
                         <li class="nav-item">
                             <a href="index.html" class="nav-link align-middle px-0 link ">
-                                <i class="fa-solid fa-house"></i></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                                <i class="fa-solid fa-house"></i></i>
+                                <span class="ms-1 d-none d-sm-inline">Inicio</span>
                             </a>
                         </li>
                         <li>
                             <a href="#dashboard" data-bs-toggle="collapse" class="nav-link px-0 align-middle link">
-                                <i class="fa-solid fa-table-columns"></i> <span
-                                    class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
-                            <ul class="collapse nav flex-column ms-1 show" id="dashboard" data-bs-parent="#menu">
+                                <i class="fa-solid fa-table-columns"></i>
+                                <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+                            </a>
+                            <ul class="collapse nav flex-column ms-1" id="dashboard" data-bs-parent="#menu">
                                 <li>
                                     <a href="alertas.html" class="nav-link px-0 link"> <i class="fa-solid fa-bell"></i>
                                         <span class="d-none d-sm-inline">Alertas</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="transacoes.html" class="nav-link px-0 link active"> <i
+                                    <a href="transacoes.html" class="nav-link px-0 link"> <i
                                             class="fa-solid fa-arrows-rotate"></i> <span
                                             class="d-none d-sm-inline">Transações</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="fornecedores.html" class="nav-link align-middle px-0 link">
-                                <i class="fa-solid fa-truck"></i> <span
-                                    class="ms-1 d-none d-sm-inline">Fornecedores</span> </a>
+                        <li>
+                            <a href="#fornecedores" data-bs-toggle="collapse" class="nav-link px-0 align-middle link">
+                                <i class="fa-solid fa-truck"></i>
+                                <span class="ms-1 d-none d-sm-inline">Fornecedores</span>
                             </a>
+                            <ul class="collapse nav flex-column ms-1" id="fornecedores" data-bs-parent="#menu">
+                                <li>
+                                    <a href="fornecedores.html" class="nav-link px-0 link">
+                                        <i class="fa-solid fa-table-list"></i>
+                                        <span class="d-none d-sm-inline">Lista</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="fornecedores-produtos.html" class="nav-link px-0 link">
+                                        <i class="fa-solid fa-dolly"></i>
+                                        <span class="d-none d-sm-inline">Produtos</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="armazens.html" class="nav-link align-middle px-0 link">
-                                <i class="fa-solid fa-warehouse"></i><span
-                                    class="ms-1 d-none d-sm-inline">Armazéns</span>
+                                <i class="fa-solid fa-warehouse"></i>
+                                <span class="ms-1 d-none d-sm-inline">Armazéns</span>
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a href="produtos.html" class="nav-link align-middle px-0 link">
-                                <i class="fa-solid fa-box-open"></i><span
-                                    class="ms-1 d-none d-sm-inline">Produtos</span></a>
+                                <i class="fa-solid fa-box-open"></i>
+                                <span class="ms-1 d-none d-sm-inline">Produtos</span>
                             </a>
                         </li>
                     </ul>
                     <hr>
                     <div class="dropdown pb-4">
                         <a href="#" class="d-flex align-items-center dropdown-toggle link" id="dropdownPerfil"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown">
                             <i class="fa-solid fa-user"></i>
                             <span class="d-none d-sm-inline mx-1">Perfil</span>
                         </a>
                         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownPerfil">
-                            <li><a class="dropdown-item link" href="contas.html">Contas</a></li>
+                            <li>
+                                <a class="dropdown-item link" href="contas.html">Contas</a>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item link" href="logout.html">Sair</a></li>
+                            <li>
+                                <a class="dropdown-item link" href="logout.html">Sair</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
