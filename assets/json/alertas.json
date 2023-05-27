@@ -1,25 +1,49 @@
 {
-    "ALERTAS": [
+    "PRODUTOS": [
         {
             "ID_PRODUTO": 1,
-            "PRODUTO": "Caneta Azul",
-            "ARMAZEM": "Matriz",
-            "QUANTIDADE_ATUAL": 5,
-            "QUANTIDADE_MINNIMA": 10
+            "TXT_NOME": "Caneta Azul"
         },
         {
             "ID_PRODUTO": 2,
-            "PRODUTO": "Caneta Vermelha",
-            "ARMAZEM": "Matriz",
-            "QUANTIDADE_ATUAL": 5,
-            "QUANTIDADE_MINNIMA": 10
+            "TXT_NOME": "Caneta Vermelha"
         },
         {
             "ID_PRODUTO": 3,
-            "PRODUTO": "Caneta Preta",
-            "ARMAZEM": "Matriz",
-            "QUANTIDADE_ATUAL": 5,
-            "QUANTIDADE_MINNIMA": 10
+            "TXT_NOME": "Caneta Preta"
+        }
+    ],
+    "ARMAZENS": [
+        {
+            "ID_ARMAZEM": 1,
+            "TXT_NOME": "Matriz"
+        },
+        {
+            "ID_ARMAZEM": 2,
+            "TXT_NOME": "Armazem 2"
+        }
+    ],
+    "ALERTAS": [
+        {
+            "ID_PRODUTO": 1,
+            "TXT_PRODUTO": "Caneta Azul",
+            "TXT_ARMAZEM": "Matriz",
+            "NUM_QUANTIDADE_ATUAL": 5,
+            "NUM_QUANTIDADE_MINIMA": 10
+        },
+        {
+            "ID_PRODUTO": 2,
+            "TXT_PRODUTO": "Caneta Vermelha",
+            "TXT_ARMAZEM": "Matriz",
+            "NUM_QUANTIDADE_ATUAL": 5,
+            "NUM_QUANTIDADE_MINIMA": 10
+        },
+        {
+            "ID_PRODUTO": 3,
+            "TXT_PRODUTO": "Caneta Preta",
+            "TXT_ARMAZEM": "Matriz",
+            "NUM_QUANTIDADE_ATUAL": 5,
+            "NUM_QUANTIDADE_MINIMA": 10
         }
     ]
 }
