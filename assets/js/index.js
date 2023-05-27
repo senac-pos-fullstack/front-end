@@ -164,6 +164,11 @@ function carregarTransacoes(transacoes) {
         tdData.innerText = transacao.DAT_TRANSACAO;
         tr.appendChild(tdData);
 
+        //TD USUARIO
+        const tdUsuario = document.createElement("td");
+        tdUsuario.innerText = transacao.TXT_USUARIO;
+        tr.appendChild(tdUsuario);
+
         tbody.appendChild(tr);
     });
 }

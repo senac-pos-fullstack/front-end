@@ -34,7 +34,8 @@
             "TXT_EMPRESA": "-",
             "TXT_ARMAZEM": "Matriz",
             "TXT_DESCRICAO": "Algo...",
-            "DAT_TRANSACAO": "20/05/2023 18:10"
+            "DAT_TRANSACAO": "20/05/2023 18:10",
+            "TXT_USUARIO": "Admin"
         },
         {
             "ID_PRODUTO": 1,
@@ -44,7 +45,8 @@
             "TXT_EMPRESA": "-",
             "TXT_ARMAZEM": "Armazém 1",
             "TXT_DESCRICAO": "Algo...",
-            "DAT_TRANSACAO": "20/05/2023 18:11"
+            "DAT_TRANSACAO": "20/05/2023 18:11",
+            "TXT_USUARIO": "Admin"
         },
         {
             "ID_PRODUTO": 1,
@@ -54,7 +56,8 @@
             "TXT_EMPRESA": "Empresa 1",
             "TXT_ARMAZEM": "Matriz",
             "TXT_DESCRICAO": "Algo...",
-            "DAT_TRANSACAO": "20/05/2023 18:10"
+            "DAT_TRANSACAO": "20/05/2023 18:10",
+            "TXT_USUARIO": "Admin"
         },
         {
             "ID_PRODUTO": 1,
@@ -64,7 +67,8 @@
             "TXT_EMPRESA": "Empresa 1",
             "TXT_ARMAZEM": "Matriz",
             "TXT_DESCRICAO": "Algo...",
-            "DAT_TRANSACAO": "20/05/2023 18:10"
+            "DAT_TRANSACAO": "20/05/2023 18:10",
+            "TXT_USUARIO": "Admin"
         },
         {
             "ID_PRODUTO": 1,
@@ -74,7 +78,8 @@
             "TXT_EMPRESA": "Empresa 1",
             "TXT_ARMAZEM": "Matriz",
             "TXT_DESCRICAO": "Algo...",
-            "DAT_TRANSACAO": "20/05/2023 18:10"
+            "DAT_TRANSACAO": "20/05/2023 18:10",
+            "TXT_USUARIO": "Admin"
         },
         {
             "ID_PRODUTO": 1,
@@ -84,7 +89,8 @@
             "TXT_EMPRESA": "Empresa 1",
             "TXT_ARMAZEM": "Matriz",
             "TXT_DESCRICAO": "Algo...",
-            "DAT_TRANSACAO": "20/05/2023 18:10"
+            "DAT_TRANSACAO": "20/05/2023 18:10",
+            "TXT_USUARIO": "Admin"
         },
         {
             "ID_PRODUTO": 1,
@@ -94,7 +100,8 @@
             "TXT_EMPRESA": "Empresa 1",
             "TXT_ARMAZEM": "Matriz",
             "TXT_DESCRICAO": "Algo...",
-            "DAT_TRANSACAO": "20/05/2023 18:10"
+            "DAT_TRANSACAO": "20/05/2023 18:10",
+            "TXT_USUARIO": "Admin"
         },
         {
             "ID_PRODUTO": 1,
@@ -104,7 +111,8 @@
             "TXT_EMPRESA": "Empresa 1",
             "TXT_ARMAZEM": "Matriz",
             "TXT_DESCRICAO": "Algo...",
-            "DAT_TRANSACAO": "20/05/2023 18:10"
+            "DAT_TRANSACAO": "20/05/2023 18:10",
+            "TXT_USUARIO": "Admin"
         },
         {
             "ID_PRODUTO": 1,
@@ -114,7 +122,8 @@
             "TXT_EMPRESA": "Empresa 1",
             "TXT_ARMAZEM": "Matriz",
             "TXT_DESCRICAO": "Algo...",
-            "DAT_TRANSACAO": "20/05/2023 18:10"
+            "DAT_TRANSACAO": "20/05/2023 18:10",
+            "TXT_USUARIO": "Admin"
         },
         {
             "ID_PRODUTO": 1,
@@ -124,7 +133,8 @@
             "TXT_EMPRESA": "Empresa 1",
             "TXT_ARMAZEM": "Matriz",
             "TXT_DESCRICAO": "Algo...",
-            "DAT_TRANSACAO": "20/05/2023 18:10"
+            "DAT_TRANSACAO": "20/05/2023 18:10",
+            "TXT_USUARIO": "Admin"
         },
         {
             "ID_PRODUTO": 1,
@@ -134,7 +144,8 @@
             "TXT_EMPRESA": "Empresa 1",
             "TXT_ARMAZEM": "Matriz",
             "TXT_DESCRICAO": "Algo...",
-            "DAT_TRANSACAO": "20/05/2023 18:10"
+            "DAT_TRANSACAO": "20/05/2023 18:10",
+            "TXT_USUARIO": "Admin"
         }
     ]
 }
