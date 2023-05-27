@@ -28,48 +28,27 @@
                         id="menu">
                         <li class="nav-item">
                             <a href="index.html" class="nav-link align-middle px-0 link ">
-                                <i class="fa-solid fa-house"></i></i>
+                                <i class="fa-solid fa-table-columns"></i>
                                 <span class="ms-1 d-none d-sm-inline">Inicio</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#dashboard" data-bs-toggle="collapse" class="nav-link px-0 align-middle link">
-                                <i class="fa-solid fa-table-columns"></i>
-                                <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+                        <li class="nav-item">
+                            <a href="alertas.html" class="nav-link align-middle px-0 link ">
+                                <i class="fa-solid fa-bell"></i>
+                                <span class="ms-1 d-none d-sm-inline">Alertas</span>
                             </a>
-                            <ul class="collapse nav flex-column ms-1" id="dashboard" data-bs-parent="#menu">
-                                <li>
-                                    <a href="alertas.html" class="nav-link px-0 link"> <i class="fa-solid fa-bell"></i>
-                                        <span class="d-none d-sm-inline">Alertas</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="transacoes.html" class="nav-link px-0 link"> <i
-                                            class="fa-solid fa-arrows-rotate"></i> <span
-                                            class="d-none d-sm-inline">Transações</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li>
-                            <a href="#fornecedores" data-bs-toggle="collapse" class="nav-link px-0 align-middle link">
-                                <i class="fa-solid fa-truck"></i>
-                                <span class="ms-1 d-none d-sm-inline">Fornecedores</span>
+                        <li class="nav-item">
+                            <a href="transacoes.html" class="nav-link align-middle px-0 link ">
+                                <i class="fa-solid fa-arrows-rotate"></i>
+                                <span class="ms-1 d-none d-sm-inline">Transações</span>
                             </a>
-                            <ul class="collapse nav flex-column ms-1" id="fornecedores" data-bs-parent="#menu">
-                                <li>
-                                    <a href="fornecedores.html" class="nav-link px-0 link">
-                                        <i class="fa-solid fa-table-list"></i>
-                                        <span class="d-none d-sm-inline">Lista</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="fornecedores-produtos.html" class="nav-link px-0 link">
-                                        <i class="fa-solid fa-dolly"></i>
-                                        <span class="d-none d-sm-inline">Produtos</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="empresas.html" class="nav-link align-middle px-0 link">
+                                <i class="fa-solid fa-crosshairs"></i>
+                                <span class="ms-1 d-none d-sm-inline">Empresas</span>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a href="armazens.html" class="nav-link align-middle px-0 link">
@@ -106,124 +85,112 @@
                 </div>
             </div>
 
-            <div class="col py-3">
-                <div>
-                    <div class="row my-2">
-                        <div class="col-12">
-                            <h4>Alertas</h4>
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Produto</th>
-                                        <th scope="col">Armazem</th>
-                                        <th class="text-center" scope="col">Qtd atual</th>
-                                        <th class="text-center" scope="col">Qtd minima</th>
-                                        <th class="text-center" scope="col">Comprar</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Caneta</td>
-                                        <td>Armazem Senac</td>
-                                        <td class="text-center">9</td>
-                                        <td class="text-center">30</td>
-                                        <td class="text-center"><a href="#" class="link"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Apagador</td>
-                                        <td>Matriz</td>
-                                        <td class="text-center">5</td>
-                                        <td class="text-center">10</td>
-                                        <td class="text-center"><a href="#" class="link"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Canetão azul</td>
-                                        <td>Armazem Senac</td>
-                                        <td class="text-center">50</td>
-                                        <td class="text-center">200</td>
-                                        <td class="text-center"><a href="#" class="link"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Caneta</td>
-                                        <td>Armazem Senac</td>
-                                        <td class="text-center">9</td>
-                                        <td class="text-center">30</td>
-                                        <td class="text-center"><a href="#" class="link"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Apagador</td>
-                                        <td>Matriz</td>
-                                        <td class="text-center">5</td>
-                                        <td class="text-center">10</td>
-                                        <td class="text-center"><a href="#" class="link"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Canetão azul</td>
-                                        <td>Armazem Senac</td>
-                                        <td class="text-center">50</td>
-                                        <td class="text-center">200</td>
-                                        <td class="text-center"><a href="#" class="link"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Caneta</td>
-                                        <td>Armazem Senac</td>
-                                        <td class="text-center">9</td>
-                                        <td class="text-center">30</td>
-                                        <td class="text-center"><a href="#" class="link"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Apagador</td>
-                                        <td>Matriz</td>
-                                        <td class="text-center">5</td>
-                                        <td class="text-center">10</td>
-                                        <td class="text-center"><a href="#" class="link"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Canetão azul</td>
-                                        <td>Armazem Senac</td>
-                                        <td class="text-center">50</td>
-                                        <td class="text-center">200</td>
-                                        <td class="text-center"><a href="#" class="link"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
+            <div class="col m-4">
+                <div class="row">
+                    <div class="col-6">
+                        <h4>Alertas</h4>
                     </div>
+                </div>
 
-                    <div class="row my-5">
-                        <nav>
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1">Anterior</a>
-                                </li>
-                                <li class="page-item active" aria-current="page">
-                                    <a class="page-link link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link link" href="#">Próximo</a>
-                                </li>
-                            </ul>
-                        </nav>
+                <div class="my-4 mx-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Produto</th>
+                                                <th scope="col">Armazem</th>
+                                                <th class="text-center" scope="col">Qtd atual</th>
+                                                <th class="text-center" scope="col">Qtd minima</th>
+                                                <th class="text-center" scope="col">Transação</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Caneta</td>
+                                                <td>Armazem Senac</td>
+                                                <td class="text-center">9</td>
+                                                <td class="text-center">30</td>
+                                                <td class="text-center"><a href="#" class="link"><i
+                                                            class="fa-solid fa-arrows-rotate"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apagador</td>
+                                                <td>Matriz</td>
+                                                <td class="text-center">5</td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center"><a href="#" class="link"><i
+                                                            class="fa-solid fa-arrows-rotate"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Canetão azul</td>
+                                                <td>Armazem Senac</td>
+                                                <td class="text-center">50</td>
+                                                <td class="text-center">200</td>
+                                                <td class="text-center"><a href="#" class="link"><i
+                                                            class="fa-solid fa-arrows-rotate"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Caneta</td>
+                                                <td>Armazem Senac</td>
+                                                <td class="text-center">9</td>
+                                                <td class="text-center">30</td>
+                                                <td class="text-center"><a href="#" class="link"><i
+                                                            class="fa-solid fa-arrows-rotate"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apagador</td>
+                                                <td>Matriz</td>
+                                                <td class="text-center">5</td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center"><a href="#" class="link"><i
+                                                            class="fa-solid fa-arrows-rotate"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Canetão azul</td>
+                                                <td>Armazem Senac</td>
+                                                <td class="text-center">50</td>
+                                                <td class="text-center">200</td>
+                                                <td class="text-center"><a href="#" class="link"><i
+                                                            class="fa-solid fa-arrows-rotate"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Caneta</td>
+                                                <td>Armazem Senac</td>
+                                                <td class="text-center">9</td>
+                                                <td class="text-center">30</td>
+                                                <td class="text-center"><a href="#" class="link"><i
+                                                            class="fa-solid fa-arrows-rotate"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apagador</td>
+                                                <td>Matriz</td>
+                                                <td class="text-center">5</td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center"><a href="#" class="link"><i
+                                                            class="fa-solid fa-arrows-rotate"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Canetão azul</td>
+                                                <td>Armazem Senac</td>
+                                                <td class="text-center">50</td>
+                                                <td class="text-center">200</td>
+                                                <td class="text-center"><a href="#" class="link"><i
+                                                            class="fa-solid fa-arrows-rotate"></i></a></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

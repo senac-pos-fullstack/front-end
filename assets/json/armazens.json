@@ -3,29 +3,17 @@
         {
             "ID_ARMAZEM": 1,
             "TXT_NOME": "Armazem 1",
-            "TXT_ENDERECO": "Rua do armazem 1, nº 123",
-            "TXT_TELEFONE": "11 91234-5678",
             "BIT_DELETAR": 0
         },
         {
             "ID_ARMAZEM": 2,
             "TXT_NOME": "Armazem 2",
-            "TXT_ENDERECO": "Rua do armazem 2, nº 123",
-            "TXT_TELEFONE": "11 91234-5678",
             "BIT_DELETAR": 0
         },
         {
             "ID_ARMAZEM": 3,
             "TXT_NOME": "Armazem 3",
-            "TXT_ENDERECO": "Rua do armazem 3, nº 123",
-            "TXT_TELEFONE": "11 91234-5678",
             "BIT_DELETAR": 1
         }
-    ],
-    "PAGINACAO": {
-        "TOTAL_ITEM": 3,
-        "PAGINA_QTD_ITEM": 10,
-        "PAGINA_TOTAL": 1,
-        "PAGINAL_ATUAL": 1
-    }
+    ]
 }

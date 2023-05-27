@@ -38,7 +38,7 @@ function carregar(empresas) {
     const iVitrine = document.createElement("i");
     iVitrine.classList.add("fa-solid", "fa-bars");
     aVitrine.appendChild(iVitrine);
-    tdEditar.appendChild(aVitrine);
+    tdVitrine.appendChild(aVitrine);
     tr.appendChild(tdVitrine);
 
     //TD EDITAR

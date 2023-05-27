@@ -1,0 +1,19 @@
+{
+    "CONTAS": [
+        {
+            "ID_CONTA": 1,
+            "TXT_USUARIO": "Admin",
+            "BIT_DELETAR": 0
+        },
+        {
+            "ID_CONTA": 2,
+            "TXT_USUARIO": "Gabriel",
+            "BIT_DELETAR": 0
+        },
+        {
+            "ID_CONTA": 3,
+            "TXT_USUARIO": "Batalha",
+            "BIT_DELETAR": 1
+        }
+    ]
+}

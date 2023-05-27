@@ -15,6 +15,9 @@
     <!-- Font awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- SELECT WITH SEARCH -->
+    <link rel="stylesheet" href="assets/css/dselect.css">
+
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -28,48 +31,27 @@
                         id="menu">
                         <li class="nav-item">
                             <a href="index.html" class="nav-link align-middle px-0 link ">
-                                <i class="fa-solid fa-house"></i></i>
+                                <i class="fa-solid fa-table-columns"></i>
                                 <span class="ms-1 d-none d-sm-inline">Inicio</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#dashboard" data-bs-toggle="collapse" class="nav-link px-0 align-middle link">
-                                <i class="fa-solid fa-table-columns"></i>
-                                <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+                        <li class="nav-item">
+                            <a href="alertas.html" class="nav-link align-middle px-0 link ">
+                                <i class="fa-solid fa-bell"></i>
+                                <span class="ms-1 d-none d-sm-inline">Alertas</span>
                             </a>
-                            <ul class="collapse nav flex-column ms-1" id="dashboard" data-bs-parent="#menu">
-                                <li>
-                                    <a href="alertas.html" class="nav-link px-0 link"> <i class="fa-solid fa-bell"></i>
-                                        <span class="d-none d-sm-inline">Alertas</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="transacoes.html" class="nav-link px-0 link"> <i
-                                            class="fa-solid fa-arrows-rotate"></i> <span
-                                            class="d-none d-sm-inline">Transações</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li>
-                            <a href="#fornecedores" data-bs-toggle="collapse" class="nav-link px-0 align-middle link">
-                                <i class="fa-solid fa-truck"></i>
-                                <span class="ms-1 d-none d-sm-inline">Fornecedores</span>
+                        <li class="nav-item">
+                            <a href="transacoes.html" class="nav-link align-middle px-0 link ">
+                                <i class="fa-solid fa-arrows-rotate"></i>
+                                <span class="ms-1 d-none d-sm-inline">Transações</span>
                             </a>
-                            <ul class="collapse nav flex-column ms-1" id="fornecedores" data-bs-parent="#menu">
-                                <li>
-                                    <a href="fornecedores.html" class="nav-link px-0 link">
-                                        <i class="fa-solid fa-table-list"></i>
-                                        <span class="d-none d-sm-inline">Lista</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="fornecedores-produtos.html" class="nav-link px-0 link">
-                                        <i class="fa-solid fa-dolly"></i>
-                                        <span class="d-none d-sm-inline">Produtos</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="empresas.html" class="nav-link align-middle px-0 link">
+                                <i class="fa-solid fa-crosshairs"></i>
+                                <span class="ms-1 d-none d-sm-inline">Empresas</span>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a href="armazens.html" class="nav-link align-middle px-0 link">
@@ -106,138 +88,124 @@
                 </div>
             </div>
 
-            <div class="col py-3">
+            <div class="col m-4">
                 <div class="row">
                     <div class="col-6">
                         <h4>Transação</h4>
                     </div>
                 </div>
-                <div class="row my-4">
-                    <div class="col-12">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="formaTransacao" id="compravenda"
-                                value="compravenda" checked>
-                            <label class="form-check-label" for="compravenda">Compra ou Venda?</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="formaTransacao" id="transferencia"
-                                value="transferencia">
-                            <label class="form-check-label" for="transferencia">
-                                Transferências entre depósitos?
-                            </label>
-                        </div>
-                    </div>
-                </div>
 
+                <div class="my-4 mx-2">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row m-4">
+                                        <div class="col-10">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="produtoSelect">Produto:
+                                                </label>
+                                                <select class="form-select" id="produtoSelect">
+                                                    <option value="1">Produto 1</option>
+                                                    <option value="2">Produto 2</option>
+                                                    <option value="3">Produto 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-2  align-self-end">
+                                            <div class="mb-3">
+                                                <a class="btn btn-primary  " href="produto.html"
+                                                    role="button">Adicionar</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label for="preco" class="form-label">Preço:</label>
+                                                <input type="number" class="form-control" id="produto" step=".01"
+                                                    min=".01">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="tipoSelect">Tipo: </label>
+                                                <select class="form-select" id="tipoSelect">
+                                                    <option value="1">Entrada por Nota Fiscal</option>
+                                                    <option value="2">Saída por Nota Fiscal</option>
+                                                    <option value="3">Entrada por Doação</option>
+                                                    <option value="4">Saída por Doação</option>
+                                                    <option value="5">Transferências entre depósitos?</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div id="tipoFluxo">
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="empresaSelect">Empresa: </label>
+                                                    <select class="form-select" id="empresaSelect">
+                                                        <option value="1">Empresa 1</option>
+                                                        <option value="2">Empresa 2</option>
+                                                        <option value="3">Empresa 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
 
-                <div class="row my-4" id="tipoCompravenda">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row m-4">
-                                    <div class="col-12">
-                                        <div class="mb-3">
-                                            <label for="produto" class="form-label">Caneta</label>
-                                            <input type="text" class="form-control" id="produto" value="Produto 1"
-                                                disabled>
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label for="quantidade" class="form-label">Qtd: </label>
+                                                    <input type="number" class="form-control" id="quantidade">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="armazemSelect">Armazém: </label>
+                                                    <select class="form-select" id="armazemSelect">
+                                                        <option value="1">Armazém 1</option>
+                                                        <option value="2">Armazém 2</option>
+                                                        <option value="3">Armazém 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <a class="btn btn-primary" href="#" id="confirmar">Confirmar</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="mb-3">
-                                            <label class="form-label" for="tipoSelect">Tipo: </label>
-                                            <select class="form-select" id="tipoSelect">
-                                                <option value="1">Entrada por Nota Fiscal</option>
-                                                <option value="2">Saída por Nota Fiscal</option>
-                                                <option value="3">Entrada por Doação</option>
-                                                <option value="4">Saída por Doação</option>
-                                            </select>
+                                        <div id="tipoTransferencia" style="display: none;">
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="saidaSelect">Armazém Saída: </label>
+                                                    <select class="form-select" id="saidaSelect">
+                                                        <option value="1">Armazém 1</option>
+                                                        <option value="2">Armazém 2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label for="quantidade" class="form-label">Qtd: </label>
+                                                    <input type="number" class="form-control" id="quantidade">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="entradaSelect">Armazém Entrada:
+                                                    </label>
+                                                    <select class="form-select" id="entradaSelect">
+                                                        <option value="1">Armazém 1</option>
+                                                        <option value="2">Armazém 2</option>
+                                                        <option value="3">Armazém 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <a class="btn btn-primary" href="#" id="transferir">Transferir</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="mb-3">
-                                            <label class="form-label" for="empresaSelect">Empresa: </label>
-                                            <select class="form-select" id="empresaSelect">
-                                                <option value="1">Empresa 1</option>
-                                                <option value="2">Empresa 2</option>
-                                                <option value="3">Empresa 3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="mb-3">
-                                            <label for="quantidade" class="form-label">Qtd: </label>
-                                            <input type="number" class="form-control" id="quantidade">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="mb-3">
-                                            <label class="form-label" for="armazemSelect">Armazém: </label>
-                                            <select class="form-select" id="armazemSelect">
-                                                <option value="1">Armazém 1</option>
-                                                <option value="2">Armazém 2</option>
-                                                <option value="3">Armazém 3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <a class="btn btn-primary" href="#" id="confirmar">Confirmar</a>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="row my-4" id="tipoTransferencia" style="display: none;">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row m-4">
-                                    <div class="col-12">
-                                        <div class="mb-3">
-                                            <label for="produto" class="form-label">Caneta</label>
-                                            <input type="text" class="form-control" id="produto" value="Produto 1"
-                                                disabled>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <div class="mb-3">
-                                            <label class="form-label" for="saidaSelect">Saída: </label>
-                                            <select class="form-select" id="saidaSelect">
-                                                <option value="1">Armazém 1</option>
-                                                <option value="2">Armazém 2</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="mb-3">
-                                            <label for="quantidade" class="form-label">Qtd: </label>
-                                            <input type="number" class="form-control" id="quantidade">
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <div class="mb-3">
-                                            <label class="form-label" for="entradaSelect">Entrada: </label>
-                                            <select class="form-select" id="entradaSelect">
-                                                <option value="1">Armazém 1</option>
-                                                <option value="2">Armazém 2</option>
-                                                <option value="3">Armazém 3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <a class="btn btn-primary" href="#" id="transferir">Transferir</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row my-5">
-                    <nav id="paginacao">
-                    </nav>
                 </div>
             </div>
         </div>
@@ -247,6 +215,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <!-- SELECT WITH SEARCH -->
+    <script src="assets/js/dselect.js"></script>
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/transacao.js"></script>
