@@ -1,4 +1,62 @@
 {
+    "PRODUTOS": [
+        {
+            "ID_PRODUTO": 1,
+            "TXT_NOME": "Caneta Azul"
+        },
+        {
+            "ID_PRODUTO": 2,
+            "TXT_NOME": "Caneta Vermelha"
+        },
+        {
+            "ID_PRODUTO": 3,
+            "TXT_NOME": "Caneta Preta"
+        }
+    ],
+    "ARMAZENS": [
+        {
+            "ID_ARMAZEM": 1,
+            "TXT_NOME": "Matriz"
+        },
+        {
+            "ID_ARMAZEM": 2,
+            "TXT_NOME": "Armazem 2"
+        }
+    ],
+    "EMPRESAS": [
+        {
+            "ID_EMPRESA": 1,
+            "TXT_NOME": "Empresa 1"
+        },
+        {
+            "ID_EMPRESA": 2,
+            "TXT_NOME": "Empresa 2"
+        },
+        {
+            "ID_EMPRESA": 3,
+            "TXT_NOME": "Empresa 3"
+        }
+    ],
+    "TIPOS": [
+        {
+            "ID_TIPO": 1,
+            "TXT_NOME": "Entrada"
+        },
+        {
+            "ID_TIPO": 2,
+            "TXT_NOME": "Saída"
+        },
+        {
+            "ID_TIPO": 3,
+            "TXT_NOME": "Transferência"
+        }
+    ],
+    "USUARIOS": [
+        {
+            "ID_USUARIO": 1,
+            "TXT_USUARIO": "Admin"
+        }
+    ],
     "TRANSACOES": [
         {
             "ID_PRODUTO": 1,
