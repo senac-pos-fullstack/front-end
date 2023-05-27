@@ -1,89 +1,129 @@
 {
-    "PRODUTOS": 10,
-    "EMPRESAS": 5,
-    "ARMAZENS": 3,
+    "NUM_PRODUTOS": 10,
+    "NUM_EMPRESAS": 5,
+    "NUM_ARMAZENS": 3,
     "ALERTAS": [
         {
             "ID_PRODUTO": 1,
-            "PRODUTO": "Caneta Azul",
-            "ARMAZEM": "Matriz",
-            "QUANTIDADE_ATUAL": 5,
-            "QUANTIDADE_MINNIMA": 10
+            "TXT_PRODUTO": "Caneta Azul",
+            "TXT_ARMAZEM": "Matriz",
+            "NUM_QUANTIDADE_ATUAL": 5,
+            "NUM_QUANTIDADE_MINNIMA": 10
         },
         {
             "ID_PRODUTO": 2,
-            "PRODUTO": "Caneta Vermelha",
-            "ARMAZEM": "Matriz",
-            "QUANTIDADE_ATUAL": 5,
-            "QUANTIDADE_MINNIMA": 10
+            "TXT_PRODUTO": "Caneta Vermelha",
+            "TXT_ARMAZEM": "Matriz",
+            "NUM_QUANTIDADE_ATUAL": 5,
+            "NUM_QUANTIDADE_MINNIMA": 10
         },
         {
             "ID_PRODUTO": 3,
-            "PRODUTO": "Caneta Preta",
-            "ARMAZEM": "Matriz",
-            "QUANTIDADE_ATUAL": 5,
-            "QUANTIDADE_MINNIMA": 10
+            "TXT_PRODUTO": "Caneta Preta",
+            "TXT_ARMAZEM": "Matriz",
+            "NUM_QUANTIDADE_ATUAL": 5,
+            "NUM_QUANTIDADE_MINNIMA": 10
         }
     ],
     "TRANSACOES": [
         {
             "ID_PRODUTO": 1,
-            "PRODUTO": "Caneta Azul",
-            "QUANTIDADE": 10,
-            "TIPO": "Entrada Nota Fiscal",
-            "EMPRESA": "Empresa 1",
-            "ARMAZEM": "Matriz",
-            "DESCRICAO": "Algo...",
+            "TXT_PRODUTO": "Caneta Azul",
+            "NUM_QUANTIDADE": 10,
+            "TXT_TIPO": "Entrada Nota Fiscal",
+            "TXT_EMPRESA": "Empresa 1",
+            "TXT_ARMAZEM": "Matriz",
+            "TXT_DESCRICAO": "Algo...",
             "DAT_TRANSACAO": "20/05/2023 18:10"
         },
         {
             "ID_PRODUTO": 1,
-            "PRODUTO": "Caneta Azul",
-            "QUANTIDADE": 10,
-            "TIPO": "Entrada Nota Fiscal",
-            "EMPRESA": "Empresa 1",
-            "ARMAZEM": "Matriz",
-            "DESCRICAO": "Algo...",
+            "TXT_PRODUTO": "Caneta Azul",
+            "NUM_QUANTIDADE": 10,
+            "TXT_TIPO": "Entrada Nota Fiscal",
+            "TXT_EMPRESA": "Empresa 1",
+            "TXT_ARMAZEM": "Matriz",
+            "TXT_DESCRICAO": "Algo...",
             "DAT_TRANSACAO": "20/05/2023 18:10"
         },
         {
             "ID_PRODUTO": 1,
-            "PRODUTO": "Caneta Azul",
-            "QUANTIDADE": 10,
-            "TIPO": "Entrada Nota Fiscal",
-            "EMPRESA": "Empresa 1",
-            "ARMAZEM": "Matriz",
-            "DESCRICAO": "Algo...",
+            "TXT_PRODUTO": "Caneta Azul",
+            "NUM_QUANTIDADE": 10,
+            "TXT_TIPO": "Entrada Nota Fiscal",
+            "TXT_EMPRESA": "Empresa 1",
+            "TXT_ARMAZEM": "Matriz",
+            "TXT_DESCRICAO": "Algo...",
             "DAT_TRANSACAO": "20/05/2023 18:10"
         },
         {
             "ID_PRODUTO": 1,
-            "PRODUTO": "Caneta Azul",
-            "QUANTIDADE": 10,
-            "TIPO": "Entrada Nota Fiscal",
-            "EMPRESA": "Empresa 1",
-            "ARMAZEM": "Matriz",
-            "DESCRICAO": "Algo...",
+            "TXT_PRODUTO": "Caneta Azul",
+            "NUM_QUANTIDADE": 10,
+            "TXT_TIPO": "Entrada Nota Fiscal",
+            "TXT_EMPRESA": "Empresa 1",
+            "TXT_ARMAZEM": "Matriz",
+            "TXT_DESCRICAO": "Algo...",
             "DAT_TRANSACAO": "20/05/2023 18:10"
         },
         {
             "ID_PRODUTO": 1,
-            "PRODUTO": "Caneta Azul",
-            "QUANTIDADE": 10,
-            "TIPO": "Entrada Nota Fiscal",
-            "EMPRESA": "Empresa 1",
-            "ARMAZEM": "Matriz",
-            "DESCRICAO": "Algo...",
+            "TXT_PRODUTO": "Caneta Azul",
+            "NUM_QUANTIDADE": 10,
+            "TXT_TIPO": "Entrada Nota Fiscal",
+            "TXT_EMPRESA": "Empresa 1",
+            "TXT_ARMAZEM": "Matriz",
+            "TXT_DESCRICAO": "Algo...",
             "DAT_TRANSACAO": "20/05/2023 18:10"
         },
         {
             "ID_PRODUTO": 1,
-            "PRODUTO": "Caneta Azul",
-            "QUANTIDADE": 10,
-            "TIPO": "Entrada Nota Fiscal",
-            "EMPRESA": "Empresa 1",
-            "ARMAZEM": "Matriz",
-            "DESCRICAO": "Algo...",
+            "TXT_PRODUTO": "Caneta Azul",
+            "NUM_QUANTIDADE": 10,
+            "TXT_TIPO": "Entrada Nota Fiscal",
+            "TXT_EMPRESA": "Empresa 1",
+            "TXT_ARMAZEM": "Matriz",
+            "TXT_DESCRICAO": "Algo...",
+            "DAT_TRANSACAO": "20/05/2023 18:10"
+        },
+        {
+            "ID_PRODUTO": 1,
+            "TXT_PRODUTO": "Caneta Azul",
+            "NUM_QUANTIDADE": 10,
+            "TXT_TIPO": "Entrada Nota Fiscal",
+            "TXT_EMPRESA": "Empresa 1",
+            "TXT_ARMAZEM": "Matriz",
+            "TXT_DESCRICAO": "Algo...",
+            "DAT_TRANSACAO": "20/05/2023 18:10"
+        },
+        {
+            "ID_PRODUTO": 1,
+            "TXT_PRODUTO": "Caneta Azul",
+            "NUM_QUANTIDADE": 10,
+            "TXT_TIPO": "Entrada Nota Fiscal",
+            "TXT_EMPRESA": "Empresa 1",
+            "TXT_ARMAZEM": "Matriz",
+            "TXT_DESCRICAO": "Algo...",
+            "DAT_TRANSACAO": "20/05/2023 18:10"
+        },
+        {
+            "ID_PRODUTO": 1,
+            "TXT_PRODUTO": "Caneta Azul",
+            "NUM_QUANTIDADE": 10,
+            "TXT_TIPO": "Entrada Nota Fiscal",
+            "TXT_EMPRESA": "Empresa 1",
+            "TXT_ARMAZEM": "Matriz",
+            "TXT_DESCRICAO": "Algo...",
+            "DAT_TRANSACAO": "20/05/2023 18:10"
+        },
+        {
+            "ID_PRODUTO": 1,
+            "TXT_PRODUTO": "Caneta Azul",
+            "NUM_QUANTIDADE": 10,
+            "TXT_TIPO": "Entrada Nota Fiscal",
+            "TXT_EMPRESA": "Empresa 1",
+            "TXT_ARMAZEM": "Matriz",
+            "TXT_DESCRICAO": "Algo...",
             "DAT_TRANSACAO": "20/05/2023 18:10"
         }
     ]
