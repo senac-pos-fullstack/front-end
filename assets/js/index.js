@@ -14,8 +14,6 @@ async function buscar() {
         carregarAlertas(json.ALERTAS);
         carregarTransacoes(json.TRANSACOES);
     }
-
-    console.log("tes");
 }
 
 function carregarCards(produtos, armazens, empresas) {
@@ -61,7 +59,7 @@ function carregarAlertas(alertas) {
         //TD QUANTIDADE MINIMA
         const tdMinima = document.createElement("td");
         tdMinima.classList.add("text-center");
-        tdMinima.innerText = alerta.NUM_QUANTIDADE_MINNIMA;
+        tdMinima.innerText = alerta.NUM_QUANTIDADE_MINIMA;
         tr.appendChild(tdMinima);
 
         //TD TRANSACAO
