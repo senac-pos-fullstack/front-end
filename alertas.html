@@ -96,20 +96,23 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-2">
-                                    <div class="mb-3">
-                                        <label class="form-label" for="produtoSelect">Produto: </label>
-                                        <select class="form-select" id="produtoSelect">
-                                            <option selected value="0">Todos</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-2">
+                                <div class="col-4">
                                     <div class="mb-3">
                                         <label class="form-label" for="armazemSelect">Armazém: </label>
                                         <select class="form-select" id="armazemSelect">
                                             <option selected value="0">Todos</option>
                                         </select>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="buscarProdutoCampo">Produto: </label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Buscar Produto"
+                                                aria-describedby="buscarProduto" id="buscarProdutoCampo">
+                                            <button class="btn btn-primary" type="button"
+                                                id="buscarProduto">Buscar</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -119,11 +122,11 @@
                                     <table class="table table-striped">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Produto</th>
-                                                <th scope="col">Armazem</th>
-                                                <th class="text-center" scope="col">Qtd atual</th>
-                                                <th class="text-center" scope="col">Qtd minima</th>
-                                                <th class="text-center" scope="col">Transação</th>
+                                                <th>Produto</th>
+                                                <th>Armazem</th>
+                                                <th class="text-center">Qtd atual</th>
+                                                <th class="text-center">Qtd minima</th>
+                                                <th class="text-center">Transação</th>
                                             </tr>
                                         </thead>
                                         <tbody id="alertas">
@@ -143,6 +146,7 @@
         crossorigin="anonymous"></script>
 
     <script src="assets/js/dselect.js"></script>
+    <script src="assets/js/table.js"></script>
     <script src="assets/js/alertas.js"></script>
 </body>
 

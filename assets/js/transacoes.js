@@ -11,7 +11,7 @@ async function buscar(produto = "", armazem = "") {
         const json = await response.json();
 
         carregarTransacoes(json.TRANSACOES);
-        carregarSelects(json.TIPOS, json.PRODUTOS, json.EMPRESAS, json.ARMAZENS, json.USUARIOS)
+        carregarSelects(json.TIPOS, json.EMPRESAS, json.ARMAZENS, json.USUARIOS)
     }
 }
 
@@ -21,96 +21,30 @@ function carregarTransacoes(transacoes) {
     transacoes.forEach(transacao => {
         const tr = document.createElement("tr");
 
+        tr.appendChild(criarTd(transacao.ID_TRANSACAO));
         //TD TIPO
-        const tdTipo = document.createElement("td");
-        tdTipo.innerText = transacao.TXT_TIPO;
-        tr.appendChild(tdTipo);
-
+        tr.appendChild(criarTd(transacao.TXT_TIPO));
         //TD PRODUTO
-        const tdProduto = document.createElement("td");
-        tdProduto.innerText = transacao.TXT_PRODUTO;
-        tr.appendChild(tdProduto);
-
+        tr.appendChild(criarTd(transacao.TXT_PRODUTO));
         //TD QUANTIDADE
-        const tdQuantidade = document.createElement("td");
-        tdQuantidade.classList.add("text-center");
-        tdQuantidade.innerText = transacao.NUM_QUANTIDADE;
-        tr.appendChild(tdQuantidade);
-
+        tr.appendChild(criarTd(transacao.NUM_QUANTIDADE, true));
         //TD EMPRESA
-        const tdEmpresa = document.createElement("td");
-        tdEmpresa.innerText = transacao.TXT_EMPRESA;
-        tr.appendChild(tdEmpresa);
-
+        tr.appendChild(criarTd(transacao.TXT_EMPRESA));
         //TD ARMAZEM
-        const tdArmazem = document.createElement("td");
-        tdArmazem.innerText = transacao.TXT_ARMAZEM;
-        tr.appendChild(tdArmazem);
-
+        tr.appendChild(criarTd(transacao.TXT_ARMAZEM));
         //TD DESCRICAO 
-        const descricao = `${transacao.TXT_DESCRICAO.slice(0, 17)}...`;
-        const tdDescricao = document.createElement("td");
-        const aDescricao = document.createElement("a");
-        aDescricao.href = "#";
-        aDescricao.classList.add("link");
-        aDescricao.innerText = descricao;
-        tdDescricao.appendChild(aDescricao);
-        tr.appendChild(tdDescricao);
-
-        //MODAL DESCRICAO
-        aDescricao.dataset.bsToggle = "modal";
-        aDescricao.dataset.bsTarget = `#descricao${transacao.ID_PRODUTO}`;
-
-        const divModal = document.createElement("div");
-        divModal.classList.add("modal", "fade");
-        divModal.id = `descricao${transacao.ID_PRODUTO}`;
-        divModal.tabIndex = "-1";
-        const divModalDialog = document.createElement("div");
-        divModalDialog.classList.add("modal-dialog");
-        const divModalContent = document.createElement("div");
-        divModalContent.classList.add("modal-content");
-
-        const h5Title = document.createElement("h5");
-        h5Title.classList.add("modal-title");
-        h5Title.innerText = `Descrição ${transacao.TXT_PRODUTO}`;
-        const divModalHeader = document.createElement("div");
-        divModalHeader.classList.add("modal-header");
-        const buttonClose = document.createElement("button");
-        buttonClose.classList.add("btn-close");
-        buttonClose.dataset.bsDismiss = "modal";
-        divModalHeader.appendChild(h5Title);
-        divModalHeader.appendChild(buttonClose);
-
-        const divModalBody = document.createElement("div");
-        divModalBody.classList.add("modal-body");
-        const pbody = document.createElement("p");
-        pbody.innerHTML = transacao.TXT_DESCRICAO;
-        divModalBody.appendChild(pbody);
-
-        divModalContent.appendChild(divModalHeader);
-        divModalContent.appendChild(divModalBody);
-
-        divModalDialog.appendChild(divModalContent);
-        divModal.appendChild(divModalDialog);
-        tbody.appendChild(divModal);
-
+        tr.appendChild(criarTdDescricao(transacao.ID_PRODUTO, transacao.TXT_PRODUTO, transacao.TXT_DESCRICAO));
         //TD DATA
-        const tdData = document.createElement("td");
-        tdData.innerText = transacao.DAT_TRANSACAO;
-        tr.appendChild(tdData);
-
+        tr.appendChild(criarTd(transacao.DAT_TRANSACAO));
         //TD USUARIO
-        const tdUsuario = document.createElement("td");
-        tdUsuario.innerText = transacao.TXT_USUARIO;
-        tr.appendChild(tdUsuario);
+        tr.appendChild(criarTd(transacao.TXT_USUARIO));
 
         tbody.appendChild(tr);
     });
 }
 
-function carregarSelects(tipos, produtos, empresas, armazens, usuarios) {
+function carregarSelects(tipos, empresas, armazens, usuarios) {
     const tipoSelect = document.getElementById("tipoSelect");
-    const produtoSelect = document.getElementById("produtoSelect");
     const empresaSelect = document.getElementById("empresaSelect");
     const armazemSelect = document.getElementById("armazemSelect");
     const usuarioSelect = document.getElementById("usuarioSelect");
@@ -121,14 +55,6 @@ function carregarSelects(tipos, produtos, empresas, armazens, usuarios) {
         option.innerText = tipo.TXT_NOME;
 
         tipoSelect.appendChild(option);
-    });
-
-    produtos.forEach(produto => {
-        const option = document.createElement("option");
-        option.value = produto.ID_PRODUTO;
-        option.innerText = produto.TXT_NOME;
-
-        produtoSelect.appendChild(option);
     });
 
     empresas.forEach(empresa => {
@@ -157,7 +83,6 @@ function carregarSelects(tipos, produtos, empresas, armazens, usuarios) {
 
     //SELECT WITH SEARCH
     dselect(tipoSelect, { search: true });
-    dselect(produtoSelect, { search: true });
     dselect(empresaSelect, { search: true });
     dselect(armazemSelect, { search: true });
     dselect(usuarioSelect, { search: true });

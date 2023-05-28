@@ -41,38 +41,15 @@ function carregarAlertas(alertas) {
         const tr = document.createElement("tr");
 
         //TD PRODUTO
-        const tdProduto = document.createElement("td");
-        tdProduto.innerText = alerta.TXT_PRODUTO;
-        tr.appendChild(tdProduto);
-
+        tr.appendChild(criarTd(alerta.TXT_PRODUTO));
         //TD ARMAZEM
-        const tdArmazem = document.createElement("td");
-        tdArmazem.innerText = alerta.TXT_ARMAZEM;
-        tr.appendChild(tdArmazem);
-
+        tr.appendChild(criarTd(alerta.TXT_ARMAZEM));
         //TD QUANTIDADE ATUAL
-        const tdAtual = document.createElement("td");
-        tdAtual.classList.add("text-center");
-        tdAtual.innerText = alerta.NUM_QUANTIDADE_ATUAL;
-        tr.appendChild(tdAtual);
-
+        tr.appendChild(criarTd(alerta.NUM_QUANTIDADE_ATUAL, true));
         //TD QUANTIDADE MINIMA
-        const tdMinima = document.createElement("td");
-        tdMinima.classList.add("text-center");
-        tdMinima.innerText = alerta.NUM_QUANTIDADE_MINIMA;
-        tr.appendChild(tdMinima);
-
+        tr.appendChild(criarTd(alerta.NUM_QUANTIDADE_MINIMA, true));
         //TD TRANSACAO
-        const tdTransacao = document.createElement("td");
-        tdTransacao.classList.add("text-center");
-        const aTransacao = document.createElement("a");
-        aTransacao.href = `transacao.html?id=${alerta.ID_PRODUTO}`;
-        aTransacao.classList.add("link");
-        const iTransacao = document.createElement("i");
-        iTransacao.classList.add("fa-solid", "fa-arrows-rotate");
-        aTransacao.appendChild(iTransacao);
-        tdTransacao.appendChild(aTransacao);
-        tr.appendChild(tdTransacao);
+        tr.appendChild(criarTdLink(`transacao.html?id=${alerta.ID_PRODUTO}`, "fa-arrows-rotate"));
 
         tbody.appendChild(tr);
     });
@@ -85,87 +62,21 @@ function carregarTransacoes(transacoes) {
         const tr = document.createElement("tr");
 
         //TD TIPO
-        const tdTipo = document.createElement("td");
-        tdTipo.innerText = transacao.TXT_TIPO;
-        tr.appendChild(tdTipo);
-
+        tr.appendChild(criarTd(transacao.TXT_TIPO));
         //TD PRODUTO
-        const tdProduto = document.createElement("td");
-        tdProduto.innerText = transacao.TXT_PRODUTO;
-        tr.appendChild(tdProduto);
-
+        tr.appendChild(criarTd(transacao.TXT_PRODUTO));
         //TD QUANTIDADE
-        const tdQuantidade = document.createElement("td");
-        tdQuantidade.classList.add("text-center");
-        tdQuantidade.innerText = transacao.NUM_QUANTIDADE;
-        tr.appendChild(tdQuantidade);
-
+        tr.appendChild(criarTd(transacao.NUM_QUANTIDADE, true));
         //TD EMPRESA
-        const tdEmpresa = document.createElement("td");
-        tdEmpresa.innerText = transacao.TXT_EMPRESA;
-        tr.appendChild(tdEmpresa);
-
+        tr.appendChild(criarTd(transacao.TXT_EMPRESA));
         //TD ARMAZEM
-        const tdArmazem = document.createElement("td");
-        tdArmazem.innerText = transacao.TXT_ARMAZEM;
-        tr.appendChild(tdArmazem);
-
+        tr.appendChild(criarTd(transacao.TXT_ARMAZEM));
         //TD DESCRICAO 
-        const descricao = `${transacao.TXT_DESCRICAO.slice(0, 17)}...`;
-        const tdDescricao = document.createElement("td");
-        const aDescricao = document.createElement("a");
-        aDescricao.href = "#";
-        aDescricao.classList.add("link");
-        aDescricao.innerText = descricao;
-        tdDescricao.appendChild(aDescricao);
-        tr.appendChild(tdDescricao);
-
-        //MODAL DESCRICAO
-        aDescricao.dataset.bsToggle = "modal";
-        aDescricao.dataset.bsTarget = `#descricao${transacao.ID_PRODUTO}`;
-
-        const divModal = document.createElement("div");
-        divModal.classList.add("modal", "fade");
-        divModal.id = `descricao${transacao.ID_PRODUTO}`;
-        divModal.tabIndex = "-1";
-        const divModalDialog = document.createElement("div");
-        divModalDialog.classList.add("modal-dialog");
-        const divModalContent = document.createElement("div");
-        divModalContent.classList.add("modal-content");
-
-        const h5Title = document.createElement("h5");
-        h5Title.classList.add("modal-title");
-        h5Title.innerText = `Descrição ${transacao.TXT_PRODUTO}`;
-        const divModalHeader = document.createElement("div");
-        divModalHeader.classList.add("modal-header");
-        const buttonClose = document.createElement("button");
-        buttonClose.classList.add("btn-close");
-        buttonClose.dataset.bsDismiss = "modal";
-        divModalHeader.appendChild(h5Title);
-        divModalHeader.appendChild(buttonClose);
-
-        const divModalBody = document.createElement("div");
-        divModalBody.classList.add("modal-body");
-        const pbody = document.createElement("p");
-        pbody.innerHTML = transacao.TXT_DESCRICAO;
-        divModalBody.appendChild(pbody);
-
-        divModalContent.appendChild(divModalHeader);
-        divModalContent.appendChild(divModalBody);
-
-        divModalDialog.appendChild(divModalContent);
-        divModal.appendChild(divModalDialog);
-        tbody.appendChild(divModal);
-
+        tr.appendChild(criarTdDescricao(transacao.ID_PRODUTO, transacao.TXT_PRODUTO, transacao.TXT_DESCRICAO));
         //TD DATA
-        const tdData = document.createElement("td");
-        tdData.innerText = transacao.DAT_TRANSACAO;
-        tr.appendChild(tdData);
-
+        tr.appendChild(criarTd(transacao.DAT_TRANSACAO));
         //TD USUARIO
-        const tdUsuario = document.createElement("td");
-        tdUsuario.innerText = transacao.TXT_USUARIO;
-        tr.appendChild(tdUsuario);
+        tr.appendChild(criarTd(transacao.TXT_USUARIO));
 
         tbody.appendChild(tr);
     });

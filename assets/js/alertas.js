@@ -11,7 +11,7 @@ async function buscar(produto = "", armazem = "") {
         const json = await response.json();
 
         carregarAlertas(json.ALERTAS);
-        carregarSelects(json.PRODUTOS, json.ARMAZENS)
+        carregarSelects(json.ARMAZENS)
     }
 }
 
@@ -28,54 +28,22 @@ function carregarAlertas(alertas) {
         const tr = document.createElement("tr");
 
         //TD PRODUTO
-        const tdProduto = document.createElement("td");
-        tdProduto.innerText = alerta.TXT_PRODUTO;
-        tr.appendChild(tdProduto);
-
+        tr.appendChild(criarTd(alerta.TXT_PRODUTO));
         //TD ARMAZEM
-        const tdArmazem = document.createElement("td");
-        tdArmazem.innerText = alerta.TXT_ARMAZEM;
-        tr.appendChild(tdArmazem);
-
+        tr.appendChild(criarTd(alerta.TXT_ARMAZEM));
         //TD QUANTIDADE ATUAL
-        const tdAtual = document.createElement("td");
-        tdAtual.classList.add("text-center");
-        tdAtual.innerText = alerta.NUM_QUANTIDADE_ATUAL;
-        tr.appendChild(tdAtual);
-
+        tr.appendChild(criarTd(alerta.NUM_QUANTIDADE_ATUAL, true));
         //TD QUANTIDADE MINIMA
-        const tdMinima = document.createElement("td");
-        tdMinima.classList.add("text-center");
-        tdMinima.innerText = alerta.NUM_QUANTIDADE_MINIMA;
-        tr.appendChild(tdMinima);
-
+        tr.appendChild(criarTd(alerta.NUM_QUANTIDADE_MINIMA, true));
         //TD TRANSACAO
-        const tdTransacao = document.createElement("td");
-        tdTransacao.classList.add("text-center");
-        const aTransacao = document.createElement("a");
-        aTransacao.href = `transacao.html?id=${alerta.ID_PRODUTO}`;
-        aTransacao.classList.add("link");
-        const iTransacao = document.createElement("i");
-        iTransacao.classList.add("fa-solid", "fa-arrows-rotate");
-        aTransacao.appendChild(iTransacao);
-        tdTransacao.appendChild(aTransacao);
-        tr.appendChild(tdTransacao);
+        tr.appendChild(criarTdLink(`transacao.html?id=${alerta.ID_PRODUTO}`, "fa-arrows-rotate"));
 
         tbody.appendChild(tr);
     });
 }
 
-function carregarSelects(produtos, armazens) {
-    const produtoSelect = document.getElementById("produtoSelect");
+function carregarSelects(armazens) {
     const armazemSelect = document.getElementById("armazemSelect");
-
-    produtos.forEach(produto => {
-        const option = document.createElement("option");
-        option.value = produto.ID_PRODUTO;
-        option.innerText = produto.TXT_NOME;
-
-        produtoSelect.appendChild(option);
-    });
 
     armazens.forEach(armazem => {
         const option = document.createElement("option");
@@ -85,7 +53,6 @@ function carregarSelects(produtos, armazens) {
         armazemSelect.appendChild(option);
     });
 
-    dselect(produtoSelect, { search: true });
     dselect(armazemSelect, { search: true });
 }
 

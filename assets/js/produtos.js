@@ -31,7 +31,7 @@ function carregarProdutos(produtos) {
         //TD QTD MIN
         tr.appendChild(criarTd(produto.NUM_QUANTIDADE_MINIMA, true));
         //TD QTD ATUAL
-        tr.appendChild(criarTd(produto.NUM_QUANTIDADE_ATUAL));
+        tr.appendChild(criarTd(produto.NUM_QUANTIDADE_ATUAL, true));
         //TD TRANSACAO
         tr.appendChild(criarTdLink(`transacao.html?id=${produto.ID_PRODUTO}`, "fa-arrows-rotate"));
         //TD EMPRESAS

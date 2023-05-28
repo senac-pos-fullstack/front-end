@@ -1,18 +1,4 @@
 {
-    "PRODUTOS": [
-        {
-            "ID_PRODUTO": 1,
-            "TXT_NOME": "Caneta Azul"
-        },
-        {
-            "ID_PRODUTO": 2,
-            "TXT_NOME": "Caneta Vermelha"
-        },
-        {
-            "ID_PRODUTO": 3,
-            "TXT_NOME": "Caneta Preta"
-        }
-    ],
     "ARMAZENS": [
         {
             "ID_ARMAZEM": 1,
@@ -59,6 +45,7 @@
     ],
     "TRANSACOES": [
         {
+            "ID_TRANSACAO": 1,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -70,6 +57,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 2,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -81,6 +69,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 3,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -92,6 +81,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 4,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -103,6 +93,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 5,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -114,6 +105,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 6,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -125,6 +117,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 7,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -136,6 +129,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 8,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -147,6 +141,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 9,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -158,6 +153,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 10,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -169,6 +165,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 11,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -180,6 +177,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 12,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -191,6 +189,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 13,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -202,6 +201,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 14,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -213,6 +213,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 15,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,
@@ -224,6 +225,7 @@
             "TXT_USUARIO": "Admin"
         },
         {
+            "ID_TRANSACAO": 16,
             "ID_PRODUTO": 1,
             "TXT_PRODUTO": "Caneta Azul",
             "NUM_QUANTIDADE": 10,

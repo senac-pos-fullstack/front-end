@@ -122,3 +122,52 @@ function criarTdExcluir(id, nome, deletar) {
 
     return td;
 }
+
+function criarTdDescricao(id, nome, descricao) {
+    const descricao_min = `${descricao.slice(0, 17)}...`;
+    const td = document.createElement("td");
+    const a = document.createElement("a");
+    a.href = "#";
+    a.classList.add("link");
+    a.innerText = descricao_min;
+    a.dataset.bsToggle = "modal";
+    a.dataset.bsTarget = `#descricao${id}`;
+    td.appendChild(a);
+
+    //MODAL DESCRICAO
+    const divModal = document.createElement("div");
+    divModal.classList.add("modal", "fade");
+    divModal.id = `descricao${id}`;
+    divModal.tabIndex = "-1";
+    const divModalDialog = document.createElement("div");
+    divModalDialog.classList.add("modal-dialog");
+    const divModalContent = document.createElement("div");
+    divModalContent.classList.add("modal-content");
+
+    const h5Title = document.createElement("h5");
+    h5Title.classList.add("modal-title");
+    h5Title.innerText = `Descrição ${nome}`;
+    const divModalHeader = document.createElement("div");
+    divModalHeader.classList.add("modal-header");
+    const buttonClose = document.createElement("button");
+    buttonClose.classList.add("btn-close");
+    buttonClose.dataset.bsDismiss = "modal";
+    divModalHeader.appendChild(h5Title);
+    divModalHeader.appendChild(buttonClose);
+
+    const divModalBody = document.createElement("div");
+    divModalBody.classList.add("modal-body");
+    const pbody = document.createElement("p");
+    pbody.innerHTML = descricao;
+    divModalBody.appendChild(pbody);
+
+    divModalContent.appendChild(divModalHeader);
+    divModalContent.appendChild(divModalBody);
+
+    divModalDialog.appendChild(divModalContent);
+    divModal.appendChild(divModalDialog);
+
+    document.body.appendChild(divModal);
+
+    return td;
+}
