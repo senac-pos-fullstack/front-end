@@ -7,6 +7,12 @@
     color: gray !important;
 }
 
+.link:active,
+.link:focus {
+    background-color: #ffffff00 !important;
+    color: gray !important;
+}
+
 .disabled {
     color: #6c757d !important;
     border-color: #dee2e6 !important;
