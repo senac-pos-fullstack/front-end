@@ -1,6 +1,6 @@
 <h1 align="center">Projeto Front-end - Pós Full-Stack</h1>
 
-<p>Projeto criado HTML, CSS, JS e Boostrap com a finalidade de ser uma Gestão de Produtos de uma Empresa.</p>
+<p>Projeto HTML, CSS, JS e Boostrap. Está sendo criado com a finalidade de ser uma plataforma de gestão de produtos de uma empresa.</p>
 
 <h3>Criadores:</h3>
 
@@ -10,6 +10,4 @@
     <li><a href="#">Pietro</a></li>
 </ul>
 
-<h4 align="center">🚧  Projeto 🚀 Em construção...  🚧</h4>
-
- 
+<h4 align="center">🚧  Projeto em construção...  🚧</h4>
