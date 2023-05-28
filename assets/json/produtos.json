@@ -42,8 +42,8 @@
             "ID_PRODUTO": 2,
             "TXT_NOME": "Produto 2",
             "DEC_PRECO_MEDIO": 20.20,
-            "NUM_ESTOQUE_MIN": 20,
-            "NUM_QUANTIDADE": 40,
+            "NUM_QUANTIDADE_MINIMA": 20,
+            "NUM_QUANTIDADE_ATUAL": 40,
             "BIT_DELETAR": 1,
             "EMPRESAS": [
                 {
@@ -60,8 +60,8 @@
             "ID_PRODUTO": 3,
             "TXT_NOME": "Produto 3",
             "DEC_PRECO_MEDIO": 30.10,
-            "NUM_ESTOQUE_MIN": 20,
-            "NUM_QUANTIDADE": 10,
+            "NUM_QUANTIDADE_MINIMA": 20,
+            "NUM_QUANTIDADE_ATUAL": 10,
             "BIT_DELETAR": 0,
             "EMPRESAS": [
                 {
