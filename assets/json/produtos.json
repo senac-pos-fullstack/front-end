@@ -24,8 +24,8 @@
             "ID_PRODUTO": 1,
             "TXT_NOME": "Produto 1",
             "DEC_PRECO_MEDIO": 20.10,
-            "NUM_ESTOQUE_MIN": 20,
-            "NUM_QUANTIDADE": 100,
+            "NUM_QUANTIDADE_MINIMA": 20,
+            "NUM_QUANTIDADE_ATUAL": 100,
             "BIT_DELETAR": 0,
             "EMPRESAS": [
                 {

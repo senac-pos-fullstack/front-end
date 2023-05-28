@@ -135,8 +135,8 @@
                                                 <th>#</th>
                                                 <th>Nome</th>
                                                 <th>Preço médio</th>
-                                                <th class="text-center">Estoque min</th>
-                                                <th class="text-center">Qtd</th>
+                                                <th class="text-center">Qtd min</th>
+                                                <th class="text-center">Qtd atual</th>
                                                 <th class="text-center">Transação</th>
                                                 <th class="text-center">Empresas</th>
                                                 <th class="text-center">Armazéns</th>
@@ -144,94 +144,7 @@
                                                 <th class="text-center">Deletar</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="item">
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Caneta</td>
-                                                <td>R$ 2,20</td>
-                                                <td class="text-center">100</td>
-                                                <td class="text-center">321</td>
-                                                <td class="text-center">
-                                                    <a class="link" href="transacao.html?produto=1"><i
-                                                            class="fa-solid fa-arrows-rotate"></i></a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a class="link" href="#" data-bs-toggle="tooltip"
-                                                        data-bs-placement="bottom" data-bs-html="true"
-                                                        title="<p>empresa 1</p><p>empresa 2</p><p>empresa 3</p>"><i
-                                                            class="fa-solid fa-crosshairs"></i></a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a class="link" href="#" data-bs-toggle="tooltip"
-                                                        data-bs-placement="bottom" data-bs-html="true"
-                                                        title="<p>Armazém 1</p><p>Armazém 2</p><p>Armazém 3</p>"><i
-                                                            class="fa-solid fa-warehouse"></i></a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a class="link" href="#"><i class="fa-solid fa-pencil"></i></a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a class="link" href="#"><i class="fa-solid fa-trash"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Lápis</td>
-                                                <td>R$ 1,10</td>
-                                                <td class="text-center">500</td>
-                                                <td class="text-center">321</td>
-                                                <td class="text-center">
-                                                    <a class="link" href="transacao.html?produto=2"><i
-                                                            class="fa-solid fa-arrows-rotate"></i></a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a class="link" href="#" data-bs-toggle="tooltip"
-                                                        data-bs-placement="bottom" data-bs-html="true"
-                                                        title="<p>empresa 1</p><p>empresa 2</p><p>empresa 3</p>"><i
-                                                            class="fa-solid fa-crosshairs"></i></a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a class="link" href="#" data-bs-toggle="tooltip"
-                                                        data-bs-placement="bottom" data-bs-html="true"
-                                                        title="<p>Armazém 1</p><p>Armazém 2</p><p>Armazém 3</p>"><i
-                                                            class="fa-solid fa-warehouse"></i></a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a class="link" href="#"><i class="fa-solid fa-pencil"></i></a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a class="link" href="#"><i class="fa-solid fa-trash"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Borracha</td>
-                                                <td>R$ 1,10</td>
-                                                <td class="text-center">200</td>
-                                                <td class="text-center">10</td>
-                                                <td class="text-center">
-                                                    <a class="link" href="transacao.html?produto=3"><i
-                                                            class="fa-solid fa-arrows-rotate"></i></a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a class="link" href="#" data-bs-toggle="tooltip"
-                                                        data-bs-placement="bottom" data-bs-html="true"
-                                                        title="<p>empresa 1</p><p>empresa 2</p><p>empresa 3</p>"><i
-                                                            class="fa-solid fa-crosshairs"></i></a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a class="link" href="#" data-bs-toggle="tooltip"
-                                                        data-bs-placement="bottom" data-bs-html="true"
-                                                        title="<p>Armazém 1</p><p>Armazém 2</p><p>Armazém 3</p>"><i
-                                                            class="fa-solid fa-warehouse"></i></a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a class="link" href="#"><i class="fa-solid fa-pencil"></i></a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a class="link" href="#"><i class="fa-solid fa-trash"></i></a>
-                                                </td>
-                                            </tr>
+                                        <tbody id="produtos">
                                         </tbody>
                                     </table>
                                 </div>
@@ -255,7 +168,9 @@
         crossorigin="anonymous"></script>
 
     <script src="assets/js/script.js"></script>
-
+    <script src="assets/js/dselect.js"></script>
+    <script src="assets/js/table.js"></script>
+    <script src="assets/js/produtos.js"></script>
 </body>
 
 </html>
