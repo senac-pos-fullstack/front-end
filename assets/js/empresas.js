@@ -3,16 +3,27 @@ window.onload = function () {
 };
 
 async function buscar() {
-  //Mudar endpoint para webservice
-  const url =
-    "https://raw.githubusercontent.com/senac-pos-fullstack/front-end/main/assets/json/empresas.json";
+  const url = "http://localhost:8080/empresa/all";
   const response = await fetch(url);
   if (response.status == 200) {
     const json = await response.json();
 
-    carregarEmpresas(json.EMPRESAS);
+    carregarEmpresas(json);
     carregarTooltip();
 
+  }
+}
+
+async function remover(id) {
+  const url = `http://localhost:8080/empresa/${id}`;
+  const response = await fetch(url, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  if (response.status == 200) {
+    location.href = 'empresas.html';
   }
 }
 
@@ -23,13 +34,16 @@ function carregarEmpresas(empresas) {
     const tr = document.createElement("tr");
 
     //TD ID
-    tr.appendChild(criarTd(empresa.ID_EMPRESA));
+    tr.appendChild(criarTd(empresa.idEmpresa));
     //TD NOME
-    tr.appendChild(criarTd(empresa.TXT_NOME));
+    tr.appendChild(criarTd(empresa.nome));
+    //TD PRODUTO
+    tr.appendChild(criarTdLink(`empresa_produtos.html?id=${empresa.idEmpresa}`, "fa-box"));
+
     //TD EDITAR
-    tr.appendChild(criarTdLink(`empresa.html?id=${empresa.ID_EMPRESA}`, "fa-pencil"));
+    tr.appendChild(criarTdLink(`empresa.html?id=${empresa.idEmpresa}`, "fa-pencil"));
     //TD DELETAR
-    tr.appendChild(criarTdExcluir(empresa.ID_EMPRESA, empresa.TXT_NOME, empresa.BIT_DELETAR));
+    tr.appendChild(criarTdExcluir(empresa.idEmpresa, empresa.nome, empresa.deletar));
 
     tbody.appendChild(tr);
   });

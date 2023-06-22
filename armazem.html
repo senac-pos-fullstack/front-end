@@ -59,7 +59,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="empresas.html" class="nav-link align-middle px-0 link">
-                                <i class="fa-solid fa-crosshairs"></i>
+                                <i class="fa-solid fa-suitcase"></i>
                                 <span class="ms-1 d-none d-sm-inline">Empresas</span>
                             </a>
                         </li>
@@ -97,10 +97,19 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row mx-2">
+                                <div class="col-12" style="display: none;" id="idArmazemDiv">
+                                    <div class="mb-3">
+                                        <label for="idArmazem" class="form-label">Id</label>
+                                        <input type="number" class="form-control" id="idArmazem" value="0" disabled>
+                                    </div>
+                                </div>
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="armazem" class="form-label">Armazém</label>
                                         <input type="text" class="form-control" id="armazem">
+                                        <div id="validacaoArmazem" class="invalid-feedback">
+                                            Nome de armazém inválido, por favor forneça mais de 3 caracteres.
+                                        </div>
                                     </div>
                                 </div>
 
@@ -122,6 +131,8 @@
         crossorigin="anonymous"></script>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/validar.js"></script>
+    <script src="assets/js/webservice.js"></script>
     <script src="assets/js/armazem.js"></script>
 </body>
 

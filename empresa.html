@@ -59,7 +59,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="empresas.html" class="nav-link align-middle px-0 link active">
-                                <i class="fa-solid fa-crosshairs"></i>
+                                <i class="fa-solid fa-suitcase"></i>
                                 <span class="ms-1 d-none d-sm-inline">Empresas</span>
                             </a>
                         </li>
@@ -97,10 +97,19 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row mx-2">
+                                <div class="col-12" style="display: none;" id="idEmpresaDiv">
+                                    <div class="mb-3">
+                                        <label for="idEmpresa" class="form-label">Id</label>
+                                        <input type="number" class="form-control" id="idEmpresa" value="0" disabled>
+                                    </div>
+                                </div>
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="empresa" class="form-label">Empresa</label>
-                                        <input type="text" class="form-control" id="empresa">
+                                        <input type="text" class="form-control" id="empresa" required>
+                                        <div id="validacaoEmpresa" class="invalid-feedback">
+                                            Nome de empresa inválido, por favor forneça mais de 3 caracteres.
+                                        </div>
                                     </div>
                                 </div>
 
@@ -122,8 +131,9 @@
         crossorigin="anonymous"></script>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/validar.js"></script>
+    <script src="assets/js/webservice.js"></script>
     <script src="assets/js/empresa.js"></script>
-
 </body>
 
 </html>

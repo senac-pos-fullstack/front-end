@@ -1,90 +1,76 @@
 window.onload = function () {
-    buscar();
+    buscarTransacoes();
+    buscarProdutos();
+
+    document.getElementById("produtoSelect").addEventListener("change", function () {
+        const idProduto = document.getElementById("produtoSelect").value;
+        buscarTransacoes(idProduto);
+    });
 };
 
-async function buscar(produto = "", armazem = "") {
-    //Mudar endpoint para webservice
-    const url =
-        "https://raw.githubusercontent.com/senac-pos-fullstack/front-end/main/assets/json/transacoes.json";
+async function buscarTransacoes(idProduto = 0) {
+    let url = "http://localhost:8080/transacao/all";
+    if (idProduto != 0) {
+        url = `http://localhost:8080/transacao/all/${idProduto}`;
+    }
+
     const response = await fetch(url);
     if (response.status == 200) {
         const json = await response.json();
 
-        carregarTransacoes(json.TRANSACOES);
-        carregarSelects(json.TIPOS, json.EMPRESAS, json.ARMAZENS, json.USUARIOS)
+        carregarTransacoes(json);
+    }
+}
+
+async function buscarProdutos() {
+    const url = "http://localhost:8080/produto/all";
+    const response = await fetch(url);
+    if (response.status == 200) {
+        const json = await response.json();
+
+        carregarProdutos(json);
     }
 }
 
 function carregarTransacoes(transacoes) {
     const tbody = document.getElementById("transacoes");
+    tbody.innerHTML = "";
 
     transacoes.forEach(transacao => {
         const tr = document.createElement("tr");
 
-        tr.appendChild(criarTd(transacao.ID_TRANSACAO));
+        tr.appendChild(criarTd(transacao.idTransacao));
         //TD TIPO
-        tr.appendChild(criarTd(transacao.TXT_TIPO));
+        tr.appendChild(criarTd(transacao.tipo));
         //TD PRODUTO
-        tr.appendChild(criarTd(transacao.TXT_PRODUTO));
+        tr.appendChild(criarTd(transacao.produto));
         //TD QUANTIDADE
-        tr.appendChild(criarTd(transacao.NUM_QUANTIDADE, true));
+        tr.appendChild(criarTd(transacao.quantidade, true));
         //TD EMPRESA
-        tr.appendChild(criarTd(transacao.TXT_EMPRESA));
+        tr.appendChild(criarTd(transacao.empresa));
         //TD ARMAZEM
-        tr.appendChild(criarTd(transacao.TXT_ARMAZEM));
-        //TD DESCRICAO 
-        tr.appendChild(criarTdDescricao(transacao.ID_PRODUTO, transacao.TXT_PRODUTO, transacao.TXT_DESCRICAO));
+        tr.appendChild(criarTd(transacao.armazem));
         //TD DATA
-        tr.appendChild(criarTd(transacao.DAT_TRANSACAO));
+        tr.appendChild(criarTd(transacao.dataTransacao));
         //TD USUARIO
-        tr.appendChild(criarTd(transacao.TXT_USUARIO));
+        tr.appendChild(criarTd(transacao.usuario));
 
         tbody.appendChild(tr);
     });
 }
 
-function carregarSelects(tipos, empresas, armazens, usuarios) {
-    const tipoSelect = document.getElementById("tipoSelect");
-    const empresaSelect = document.getElementById("empresaSelect");
-    const armazemSelect = document.getElementById("armazemSelect");
-    const usuarioSelect = document.getElementById("usuarioSelect");
+function carregarProdutos(produtos) {
+    const produtoSelect = document.getElementById("produtoSelect");
 
-    tipos.forEach(tipo => {
+    produtos.forEach(tipo => {
         const option = document.createElement("option");
-        option.value = tipo.ID_TIPO;
-        option.innerText = tipo.TXT_NOME;
+        option.value = tipo.idProduto;
+        option.innerText = tipo.nome;
 
-        tipoSelect.appendChild(option);
-    });
-
-    empresas.forEach(empresa => {
-        const option = document.createElement("option");
-        option.value = empresa.ID_EMPRESA;
-        option.innerText = empresa.TXT_NOME;
-
-        empresaSelect.appendChild(option);
-    });
-
-    armazens.forEach(armazem => {
-        const option = document.createElement("option");
-        option.value = armazem.ID_ARMAZEM;
-        option.innerText = armazem.TXT_NOME;
-
-        armazemSelect.appendChild(option);
-    });
-
-    usuarios.forEach(usuario => {
-        const option = document.createElement("option");
-        option.value = usuario.ID_USUARIO;
-        option.innerText = usuario.TXT_USUARIO;
-
-        usuarioSelect.appendChild(option);
+        produtoSelect.appendChild(option);
     });
 
     //SELECT WITH SEARCH
-    dselect(tipoSelect, { search: true });
-    dselect(empresaSelect, { search: true });
-    dselect(armazemSelect, { search: true });
-    dselect(usuarioSelect, { search: true });
+    dselect(produtoSelect, { search: true });
 }
 

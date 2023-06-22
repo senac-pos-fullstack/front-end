@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Produtos</title>
+    <title>Transação</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -42,14 +42,14 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="transacoes.html" class="nav-link align-middle px-0 link ">
+                            <a href="transacoes.html" class="nav-link align-middle px-0 link active">
                                 <i class="fa-solid fa-arrows-rotate"></i>
                                 <span class="ms-1 d-none d-sm-inline">Transações</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="produtos.html" class="nav-link align-middle px-0 link active">
+                            <a href="produtos.html" class="nav-link align-middle px-0 link ">
                                 <i class="fa-solid fa-box-open"></i>
                                 <span class="ms-1 d-none d-sm-inline">Produtos</span>
                             </a>
@@ -62,7 +62,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="empresas.html" class="nav-link align-middle px-0 link">
-                                <i class="fa-solid fa-crosshairs"></i>
+                                <i class="fa-solid fa-suitcase"></i>
                                 <span class="ms-1 d-none d-sm-inline">Empresas</span>
                             </a>
                         </li>
@@ -102,106 +102,99 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row m-4">
-                                        <div class="col-10">
-                                            <div class="mb-3">
-                                                <label class="form-label" for="produtoSelect">Produto:
-                                                </label>
-                                                <select class="form-select" id="produtoSelect">
-                                                    <option value="1">Produto 1</option>
-                                                    <option value="2">Produto 2</option>
-                                                    <option value="3">Produto 3</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-2  align-self-end">
-                                            <div class="mb-3">
-                                                <a class="btn btn-primary  " href="produto.html"
-                                                    role="button">Adicionar</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="mb-3">
-                                                <label for="preco" class="form-label">Preço:</label>
-                                                <input type="number" class="form-control" id="produto" step=".01"
-                                                    min=".01">
-                                            </div>
-                                        </div>
                                         <div class="col-12">
                                             <div class="mb-3">
                                                 <label class="form-label" for="tipoSelect">Tipo: </label>
                                                 <select class="form-select" id="tipoSelect">
-                                                    <option value="1">Entrada por Nota Fiscal</option>
-                                                    <option value="2">Saída por Nota Fiscal</option>
-                                                    <option value="3">Entrada por Doação</option>
-                                                    <option value="4">Saída por Doação</option>
-                                                    <option value="5">Transferências entre depósitos?</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div id="tipoFluxo">
-                                            <div class="col-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="empresaSelect">Empresa: </label>
-                                                    <select class="form-select" id="empresaSelect">
-                                                        <option value="1">Empresa 1</option>
-                                                        <option value="2">Empresa 2</option>
-                                                        <option value="3">Empresa 3</option>
-                                                    </select>
+                                        <div class="col-3">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="produtoSelect">Produto:
+                                                </label>
+                                                <select class="form-select" id="produtoSelect">
+                                                    <option value="0" selected disabled>Escolha um produto</option>
+                                                </select>
+                                                <div id="validacaoProduto" class="invalid-feedback">
+                                                    Por favor escolher um produto
                                                 </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="mb-3">
-                                                    <label for="quantidade" class="form-label">Qtd: </label>
-                                                    <input type="number" class="form-control" id="quantidade">
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="armazemSelect">Armazém: </label>
-                                                    <select class="form-select" id="armazemSelect">
-                                                        <option value="1">Armazém 1</option>
-                                                        <option value="2">Armazém 2</option>
-                                                        <option value="3">Armazém 3</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <a class="btn btn-primary" href="#" id="confirmar">Confirmar</a>
                                             </div>
                                         </div>
-                                        <div id="tipoTransferencia" style="display: none;">
-                                            <div class="col-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="saidaSelect">Armazém Saída: </label>
-                                                    <select class="form-select" id="saidaSelect">
-                                                        <option value="1">Armazém 1</option>
-                                                        <option value="2">Armazém 2</option>
-                                                    </select>
+                                        <div class="col-3 ">
+                                            <div class="mb-3">
+                                                <label for="quantidadeAtual" class="form-label">Qtd Atual Armazém:
+                                                </label>
+                                                <input type="number" class="form-control" id="quantidadeAtual" min="1"
+                                                    value="0" disabled>
+                                                <div id="validacaoQuantidadeAtual" class="invalid-feedback">
+                                                    Por favor a quantidade atual não pode ser menor que a quantidade da
+                                                    operação.
                                                 </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="mb-3">
-                                                    <label for="quantidade" class="form-label">Qtd: </label>
-                                                    <input type="number" class="form-control" id="quantidade">
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="entradaSelect">Armazém Entrada:
-                                                    </label>
-                                                    <select class="form-select" id="entradaSelect">
-                                                        <option value="1">Armazém 1</option>
-                                                        <option value="2">Armazém 2</option>
-                                                        <option value="3">Armazém 3</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <a class="btn btn-primary" href="#" id="transferir">Transferir</a>
                                             </div>
                                         </div>
-
+                                        <div class="col-3">
+                                            <div class="mb-3">
+                                                <label for="quantidade" class="form-label">Qtd: </label>
+                                                <input type="number" class="form-control" id="quantidade" min="1">
+                                                <div id="validacaoQuantidade" class="invalid-feedback">
+                                                    Por favor forneça número inteiro e positivo.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 tipoEntrada">
+                                            <div class="mb-3">
+                                                <label for="preco" class="form-label">Preço:</label>
+                                                <input type="number" class="form-control" id="preco" step=".01"
+                                                    min=".01">
+                                                <div id="validacaoPreco" class="invalid-feedback">
+                                                    Por favor forneça número decimal e positivo.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-10 tipoEntrada" id="empresaCol">
+                                            <div class="">
+                                                <label class="form-label" for="empresaSelect" id="empresaLabel">Empresa:
+                                                </label>
+                                                <select class="form-select" id="empresaSelect" disabled="true">
+                                                    <option value="0">Escolha um produto</option>
+                                                </select>
+                                                <div id="validacaoEmpresa" class="invalid-feedback">
+                                                    Por favor escolher uma empresa
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 align-self-end tipoEntrada ">
+                                            <div class="" id="empresaVerTodas">
+                                                <a class="btn btn-primary  " href="#">Ver
+                                                    todas</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 tipoTransferencia" style="display: none;">
+                                            <div class="">
+                                                <label class="form-label" for="armazemSaidaSelect">Armazém
+                                                    Saída:</label>
+                                                <select class="form-select" id="armazemSaidaSelect"></select>
+                                                <div id="validacaoArmazemSaida" class="invalid-feedback">
+                                                    Por favor escolher um armazém de saída diferente do armazém de
+                                                    entrada.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="my-3">
+                                                <label class="form-label" for="armazemSelect">Armazém:
+                                                </label>
+                                                <select class="form-select" id="armazemSelect">
+                                                </select>
+                                                <div id="validacaoArmazem" class="invalid-feedback">
+                                                    Por favor escolher uma armazém
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <a class="btn btn-primary" href="#" id="transacao">Realizar Transação</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -211,7 +204,6 @@
             </div>
         </div>
     </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -219,10 +211,9 @@
 
     <!-- SELECT WITH SEARCH -->
     <script src="assets/js/dselect.js"></script>
-
+    <script src="assets/js/validar.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/transacao.js"></script>
-
 </body>
 
 </html>

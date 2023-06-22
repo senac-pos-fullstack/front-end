@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Produtos</title>
+    <title>Armazém Add Qtd</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/dselect.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -46,13 +48,13 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="produtos.html" class="nav-link align-middle px-0 link active">
+                            <a href="produtos.html" class="nav-link align-middle px-0 link">
                                 <i class="fa-solid fa-box-open"></i>
                                 <span class="ms-1 d-none d-sm-inline">Produtos</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="armazens.html" class="nav-link align-middle px-0 link">
+                            <a href="armazens.html" class="nav-link align-middle px-0 link active">
                                 <i class="fa-solid fa-warehouse"></i>
                                 <span class="ms-1 d-none d-sm-inline">Armazéns</span>
                             </a>
@@ -88,51 +90,40 @@
 
             <div class="col m-4">
                 <div class="row">
-                    <div class="col-6">
-                        <h4>Produtos</h4>
-                    </div>
-                    <div class="col-6 text-end"><a class="btn btn-primary" href="produto.html?role=add"
-                            role="button">Adicionar</a>
+                    <div class="col-12">
+                        <h4>Armazém - Quantidade Mínima do Produto</h4>
                     </div>
                 </div>
+
                 <div class="my-4 mx-2">
                     <div class="card">
                         <div class="card-body">
-                            <!--<div class="row my-4 mx-1">
-                                <div class="col-4">
+                            <div class="row mx-2">
+                                <div class="col-12">
                                     <div class="mb-3">
-                                        <label class="form-label" for="buscarProduto">Produto: </label>
-                                        <input type="text" class="form-control" id="buscarProduto" placeholder="Buscar">
+                                        <label for="armazem" class="form-label">Armazém</label>
+                                        <input type="text" class="form-control" id="armazem" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="produtoSelect">Produto</label>
+                                        <select class="form-select" id="produtoSelect">
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="quantidadeMinima" class="form-label">Quantidade Mínima</label>
+                                        <input type="number" min="1" step="1" class="form-control" id="quantidadeMinima"
+                                            value="1">
                                     </div>
                                 </div>
-                            </div>-->
-                            <div class="row my-2 mx-1">
                                 <div class="col-12">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Preço médio</th>
-                                                <th class="text-center">Qtd min</th>
-                                                <th class="text-center">Qtd atual</th>
-                                                <th class="text-center">Transação</th>
-                                                <th class="text-center">Editar</th>
-                                                <th class="text-center">Deletar</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="produtos">
-                                        </tbody>
-                                    </table>
+                                    <a class="btn btn-primary" href="#" id="confirmar">Confirmar</a>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -141,8 +132,8 @@
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/dselect.js"></script>
-    <script src="assets/js/table.js"></script>
-    <script src="assets/js/produtos.js"></script>
+    <script src="assets/js/webservice.js"></script>
+    <script src="assets/js/armazem_produto.js"></script>
 </body>
 
 </html>

@@ -1,17 +1,28 @@
 window.onload = function () {
-  buscarArmazens();
+  buscar();
 };
 
-async function buscarArmazens() {
-  //Mudar endpoint para webservice
-  const url =
-    "https://raw.githubusercontent.com/senac-pos-fullstack/front-end/main/assets/json/armazens.json";
+async function buscar() {
+  const url = "http://localhost:8080/armazem/all";
   const response = await fetch(url);
   if (response.status == 200) {
     const json = await response.json();
 
-    carregarArmazens(json.ARMAZENS);
+    carregarArmazens(json);
     carregarTooltip();
+  }
+}
+
+async function remover(id) {
+  const url = `http://localhost:8080/armazem/${id}`;
+  const response = await fetch(url, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  if (response.status == 200) {
+    location.href = 'armazens.html';
   }
 }
 
@@ -21,13 +32,15 @@ function carregarArmazens(armazens) {
   armazens.forEach(armazem => {
     const tr = document.createElement("tr");
     //TD ID
-    tr.appendChild(criarTd(armazem.ID_ARMAZEM));
+    tr.appendChild(criarTd(armazem.idArmazem));
     //TD NOME
-    tr.appendChild(criarTd(armazem.TXT_NOME));
+    tr.appendChild(criarTd(armazem.nome));
+    //TD ADD QTD PRODUTO
+    tr.appendChild(criarTdLink(`armazem_produtos.html?id=${armazem.idArmazem}`, "fa-box-open"));
     //TD EDITAR
-    tr.appendChild(criarTdLink(`armazem.html?id=${armazem.ID_ARMAZEM}`, "fa-pencil"));
+    tr.appendChild(criarTdLink(`armazem.html?id=${armazem.idArmazem}`, "fa-pencil"));
     //TD DELETAR
-    tr.appendChild(criarTdExcluir(armazem.ID_ARMAZEM, armazem.TXT_NOME, armazem.BIT_DELETAR));
+    tr.appendChild(criarTdExcluir(armazem.idArmazem, armazem.nome, armazem.deletar));
 
     tbody.appendChild(tr);
   });

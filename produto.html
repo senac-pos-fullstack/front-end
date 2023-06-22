@@ -59,7 +59,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="empresas.html" class="nav-link align-middle px-0 link">
-                                <i class="fa-solid fa-crosshairs"></i>
+                                <i class="fa-solid fa-suitcase"></i>
                                 <span class="ms-1 d-none d-sm-inline">Empresas</span>
                             </a>
                         </li>
@@ -97,16 +97,28 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row mx-2">
-                                <div class="col-12">
+                                <div class="col-12" style="display: none;" id="idProdutoDiv">
                                     <div class="mb-3">
-                                        <label for="produto" class="form-label">Produto</label>
-                                        <input type="text" class="form-control" id="produto">
+                                        <label for="idProduto" class="form-label">Id</label>
+                                        <input type="number" class="form-control" id="idProduto" value="0" disabled>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-3">
-                                        <label for="quantidadeMinima" class="form-label">Quantidade Minima</label>
-                                        <input type="number" class="form-control" id="quantidadeMinima" min="0">
+                                        <label for="produto" class="form-label">Produto</label>
+                                        <input type="text" class="form-control" id="produto">
+                                        <div id="validacaoProduto" class="invalid-feedback">
+                                            Nome de produto inválido, por favor forneça mais de 3 caracteres.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="quantidadeMinima" class="form-label">Quantidade Mínima</label>
+                                        <input type="number" class="form-control" id="quantidadeMinima" min="1">
+                                        <div id="validacaoQuantidade" class="invalid-feedback">
+                                            Quantidade mínima inválido, por favor forneça um número inteiro e positivo.
+                                        </div>
                                     </div>
                                 </div>
 
@@ -129,6 +141,8 @@
         crossorigin="anonymous"></script>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/validar.js"></script>
+    <script src="assets/js/webservice.js"></script>
     <script src="assets/js/produto.js"></script>
 
 </body>

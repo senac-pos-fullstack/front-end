@@ -3,32 +3,45 @@ window.onload = function () {
 };
 
 async function buscar() {
-    //Mudar endpoint para webservice
-    const url =
-        "https://raw.githubusercontent.com/senac-pos-fullstack/front-end/main/assets/json/contas.json";
+    const url = "http://localhost:8080/usuario/all";
     const response = await fetch(url);
     if (response.status == 200) {
         const json = await response.json();
 
-        carregarContas(json.CONTAS);
+        carregarContas(json);
         carregarTooltip();
     }
 }
 
-function carregarContas(contas) {
+async function remover(id) {
+    const url = `http://localhost:8080/usuario/${id}`;
+    const response = await fetch(url, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+    if (response.status == 200) {
+        location.href = 'contas.html';
+    }
+}
+
+function carregarContas(usuarios) {
     const tbody = document.getElementById("item");
 
-    contas.forEach(conta => {
+    usuarios.forEach(usuario => {
         const tr = document.createElement("tr");
 
         //TD ID
-        tr.appendChild(criarTd(conta.ID_CONTA));
+        tr.appendChild(criarTd(usuario.idUsuario));
+        //TD STATUS
+        tr.appendChild(criarTd(usuario.status ? "Ativo" : "Inativo"));
         //TD USUARIO
-        tr.appendChild(criarTd(conta.TXT_USUARIO));
+        tr.appendChild(criarTd(usuario.usuario));
         //TD EDITAR
-        tr.appendChild(criarTdLink(`empresa.html?id=${conta.ID_EMPRESA}`, "fa-pencil"));
+        tr.appendChild(criarTdLink(`conta.html?id=${usuario.idUsuario}`, "fa-pencil"));
         //TD DELETAR
-        tr.appendChild(criarTdExcluir(conta.ID_EMPRESA, conta.TXT_NOME, conta.BIT_DELETAR));
+        tr.appendChild(criarTdExcluir(usuario.idUsuario, usuario.usuario, usuario.deletar));
 
         tbody.appendChild(tr);
     });

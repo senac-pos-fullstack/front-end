@@ -1,31 +1,46 @@
 window.onload = function () {
-    buscar();
+    buscarCards();
+    buscarAlertas();
+    buscarTransacoes();
 };
 
-async function buscar() {
-    //Mudar endpoint para webservice
-    const url =
-        "https://raw.githubusercontent.com/senac-pos-fullstack/front-end/main/assets/json/index.json";
+async function buscarCards() {
+    const url = "http://localhost:8080/index";
     const response = await fetch(url);
     if (response.status == 200) {
         const json = await response.json();
 
-        carregarCards(json.NUM_PRODUTOS, json.NUM_EMPRESAS, json.NUM_ARMAZENS);
-        carregarAlertas(json.ALERTAS);
-        carregarTransacoes(json.TRANSACOES);
+        carregarCards(json);
     }
 }
 
-function carregarCards(produtos, armazens, empresas) {
-    let produtoQtd = document.getElementById("produtosQtd");
-    produtoQtd.innerText = produtos;
+async function buscarAlertas() {
+    const url = "http://localhost:8080/alerta/last";
+    const response = await fetch(url);
+    if (response.status == 200) {
+        const json = await response.json();
 
-    let armazensQtd = document.getElementById("armazensQtd");
-    armazensQtd.innerText = armazens;
+        carregarAlertas(json);
+    }
+}
 
+async function buscarTransacoes() {
+    const url = "http://localhost:8080/transacao/last";
+    const response = await fetch(url);
+    if (response.status == 200) {
+        const json = await response.json();
 
-    let empresasQtd = document.getElementById("empresasQtd");
-    empresasQtd.innerText = empresas;
+        carregarTransacoes(json);
+    }
+}
+
+function carregarCards(cards) {
+    document.getElementById("alertasQtd").innerText = cards.alerta;
+    document.getElementById("transacoesQtd").innerText = cards.transacao;
+    document.getElementById("produtosQtd").innerText = cards.produto;
+    document.getElementById("armazensQtd").innerText = cards.armazem;
+    document.getElementById("empresasQtd").innerText = cards.empresa;
+    document.getElementById("contasQtd").innerText = cards.usuario;
 }
 
 function carregarAlertas(alertas) {
@@ -41,15 +56,15 @@ function carregarAlertas(alertas) {
         const tr = document.createElement("tr");
 
         //TD PRODUTO
-        tr.appendChild(criarTd(alerta.TXT_PRODUTO));
+        tr.appendChild(criarTd(alerta.produto));
         //TD ARMAZEM
-        tr.appendChild(criarTd(alerta.TXT_ARMAZEM));
+        tr.appendChild(criarTd(alerta.armazem));
         //TD QUANTIDADE ATUAL
-        tr.appendChild(criarTd(alerta.NUM_QUANTIDADE_ATUAL, true));
+        tr.appendChild(criarTd(alerta.quantidadeAtual, true));
         //TD QUANTIDADE MINIMA
-        tr.appendChild(criarTd(alerta.NUM_QUANTIDADE_MINIMA, true));
+        tr.appendChild(criarTd(alerta.quantidadeMinima, true));
         //TD TRANSACAO
-        tr.appendChild(criarTdLink(`transacao.html?id=${alerta.ID_PRODUTO}`, "fa-arrows-rotate"));
+        tr.appendChild(criarTdLink(`transacao.html?idProduto=${alerta.idProduto}`, "fa-arrows-rotate"));
 
         tbody.appendChild(tr);
     });
@@ -62,21 +77,19 @@ function carregarTransacoes(transacoes) {
         const tr = document.createElement("tr");
 
         //TD TIPO
-        tr.appendChild(criarTd(transacao.TXT_TIPO));
+        tr.appendChild(criarTd(transacao.tipo));
         //TD PRODUTO
-        tr.appendChild(criarTd(transacao.TXT_PRODUTO));
+        tr.appendChild(criarTd(transacao.produto));
         //TD QUANTIDADE
-        tr.appendChild(criarTd(transacao.NUM_QUANTIDADE, true));
+        tr.appendChild(criarTd(transacao.quantidade, true));
         //TD EMPRESA
-        tr.appendChild(criarTd(transacao.TXT_EMPRESA));
+        tr.appendChild(criarTd(transacao.empresa));
         //TD ARMAZEM
-        tr.appendChild(criarTd(transacao.TXT_ARMAZEM));
-        //TD DESCRICAO 
-        tr.appendChild(criarTdDescricao(transacao.ID_PRODUTO, transacao.TXT_PRODUTO, transacao.TXT_DESCRICAO));
+        tr.appendChild(criarTd(transacao.armazem));
         //TD DATA
-        tr.appendChild(criarTd(transacao.DAT_TRANSACAO));
+        tr.appendChild(criarTd(transacao.dataTransacao));
         //TD USUARIO
-        tr.appendChild(criarTd(transacao.TXT_USUARIO));
+        tr.appendChild(criarTd(transacao.usuario));
 
         tbody.appendChild(tr);
     });

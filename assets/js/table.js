@@ -60,11 +60,11 @@ function criarTdExcluir(id, nome, deletar) {
     //MODAL REMOVER
     if (deletar) {
         a.dataset.bsToggle = "modal";
-        a.dataset.bsTarget = `#remover${id}`;
+        a.dataset.bsTarget = id.length == 2 ? `#remover${id[0]}${id[1]}` : `#remover${id}`;
 
         const divModal = document.createElement("div");
         divModal.classList.add("modal", "fade");
-        divModal.id = `remover${id}`;
+        divModal.id = id.length == 2 ? `remover${id[0]}${id[1]}` : `remover${id}`;
         divModal.tabIndex = "-1";
         const divModalDialog = document.createElement("div");
         divModalDialog.classList.add("modal-dialog");
@@ -99,7 +99,13 @@ function criarTdExcluir(id, nome, deletar) {
 
         const aFooterRemover = document.createElement("a");
         aFooterRemover.href = "#";
-        aFooterRemover.addEventListener("click", function () { remover(id) });
+        aFooterRemover.addEventListener("click", function () {
+            if (id.length == 2) {
+                remover(id[0], id[1])
+            } else {
+                remover(id);
+            }
+        });
 
         aFooterRemover.classList.add("btn", "btn-danger");
         aFooterRemover.innerText = "Remover";
