@@ -156,13 +156,27 @@ async function buscarEmpresasProduto(id) {
 }
 
 async function buscarQuantidadeAtual() {
-    const idProduto = document.getElementById("produtoSelect").value;
-    let idArmazem = 1;
+    let idProduto = document.getElementById("produtoSelect").value;
+    if (idProduto == 0) {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('idProduto')) {
+            idProduto = urlParams.get('idProduto');
+        }
+    }
+    let idArmazem;
     if (tipoEntrada || tipoSaida) {
         idArmazem = document.getElementById("armazemSelect").value;
     } else {
         idArmazem = document.getElementById("armazemSaidaSelect").value;
     }
+
+    if (idArmazem == "") {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('idArmazem')) {
+            idArmazem = urlParams.get('idArmazem');
+        }
+    }
+
     const url = `http://localhost:8080/armazem/produto/${idArmazem}/${idProduto}`;
     const quantidadeAtual = document.getElementById("quantidadeAtual");
     const response = await fetch(url);
@@ -268,6 +282,7 @@ function carregarProdutos(produtos) {
         if (idProduto == produto.idProduto) {
             option.selected = true;
             produtoChange(produto.idProduto);
+            buscarQuantidadeAtual();
         }
 
         produtoSelect.appendChild(option);

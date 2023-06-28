@@ -4,6 +4,7 @@ window.onload = function () {
         const id = urlParams.get('id');
         buscar(`empresa/${id}`);
         buscarProdutos(id);
+        idEmpresa = id;
 
         document.getElementById("addProduto").href = `empresa_produto.html?idEmpresa=${id}`;
     } else {
@@ -16,7 +17,7 @@ function carregar(empresa) {
 }
 
 async function buscarProdutos(id) {
-    const url = `http://localhost:8080/empresa/produto/all/${id}`;
+    const url = `http://localhost:8080/empresa/produto/${id}`;
     const response = await fetch(url);
     if (response.status == 200) {
         const json = await response.json();
@@ -39,6 +40,7 @@ async function remover(idEmpresa, idProduto) {
     }
 }
 
+let idEmpresa = 0;
 function carregarProdutos(produtos) {
 
     if (produtos.length > 0) {
@@ -50,7 +52,7 @@ function carregarProdutos(produtos) {
             //TD NOME
             tr.appendChild(criarTd(produto.nome));
             //TD DELETAR
-            tr.appendChild(criarTdExcluir([produto.idEmpresa, produto.idProduto], produto.nome, true));
+            tr.appendChild(criarTdExcluir([idEmpresa, produto.idProduto], produto.nome, true));
 
             tbody.appendChild(tr);
         });
